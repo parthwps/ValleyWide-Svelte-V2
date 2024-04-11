@@ -10,7 +10,7 @@
 	let emailSubject = '';
 	let emailResponse = '';
 	async function fetchContactDetails() {
-		const url = 'https://api.ulfbuilt.com/api/site-setting?populate=deep,3';
+		const url = 'https://vwapi.netdevs.net/api/site-setting?populate=deep,3';
 		const headers = {
 			Authorization: 'Bearer ' + PUBLIC_STRAPI_API
 		};
@@ -32,7 +32,7 @@
 		message = '',
 		result = '';
 	async function doContact() {
-		const contactUrl = 'https://api.ulfbuilt.com/api/contact-forms';
+		const contactUrl = 'https://vwapi.netdevs.net/api/contact-forms';
 		const res = await fetch(contactUrl, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json', Authorization: 'bearer ' + PUBLIC_STRAPI_API },
@@ -50,7 +50,7 @@
 			result = json.error.message;
 		} else {
 			result = 'Processing...';
-			const url2 = 'https://api.ulfbuilt.com/api/email/';
+			const url2 = 'https://vwapi.netdevs.net/api/email/';
 			const res2 = await fetch(url2, {
 				method: 'POST',
 				headers: {
@@ -77,9 +77,9 @@
 	}
 
 	let promise = fetchContactSettings();
-	const domain = 'https://api.ulfbuilt.com/';
+	const domain = 'https://vwapi.netdevs.net/';
 	async function fetchContactSettings() {
-		const url = 'https://api.ulfbuilt.com/api/contact-cta?populate=deep,3';
+		const url = 'https://vwapi.netdevs.net/api/contact-cta?populate=deep,3';
 		const headers = {
 			Authorization: 'Bearer ' + PUBLIC_STRAPI_API
 		};

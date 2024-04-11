@@ -92,7 +92,7 @@
   });
     </script>
     <svelte:head>
-        <link rel="preconnect" href="https://api.ulfbuilt.com/">
+        <link rel="preconnect" href="https://vwapi.netdevs.net/">
     </svelte:head>
     
     <div class="z10 {isPortfolio($page.route.id)} {isArticle($page.route.id)}">

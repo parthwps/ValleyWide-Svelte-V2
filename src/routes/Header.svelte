@@ -29,9 +29,9 @@
 	import { fly, slide } from 'svelte/transition';
 
 	let promise = fetchSiteSettings();
-	const domain = "https://api.ulfbuilt.com/";
+	const domain = "https://vwapi.netdevs.net/";
 	async function fetchSiteSettings(){
-		const url = 'https://api.ulfbuilt.com/api/site-setting?populate=deep,3';
+		const url = 'https://vwapi.netdevs.net/api/site-setting?populate=deep,3';
 		const headers = {
 			Authorization: 'Bearer ' + PUBLIC_STRAPI_API
 		};

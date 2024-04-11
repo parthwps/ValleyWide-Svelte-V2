@@ -3,12 +3,12 @@ import { Col, Container, Row } from 'sveltestrap';
 import { onMount } from "svelte";
 import axios from 'axios';
 import { fadeIn } from '$lib/GsapAnimation.js';
-const domain = "https://api.ulfbuilt.com"
+const domain = "https://vwapi.netdevs.net"
 import { PUBLIC_STRAPI_API } from '$env/static/public';
 
 let promise = fetchCta();
 async function fetchCta(){
-    const url = 'https://api.ulfbuilt.com/api/footer?populate=deep,3';
+    const url = 'https://vwapi.netdevs.net/api/footer?populate=deep,3';
     const headers = {
         Authorization: 'Bearer ' + PUBLIC_STRAPI_API
     };
@@ -23,7 +23,7 @@ async function fetchCta(){
 
 let promiseSite = fetchSiteSettings();
 async function fetchSiteSettings(){
-    const url = 'https://api.ulfbuilt.com/api/site-setting?populate=deep,3';
+    const url = 'https://vwapi.netdevs.net/api/site-setting?populate=deep,3';
     const headers = {
         Authorization: 'Bearer ' + PUBLIC_STRAPI_API
     };

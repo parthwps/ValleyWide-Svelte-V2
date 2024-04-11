@@ -8,7 +8,7 @@
 	import Siema from 'siema';
 	import { onMount, createEventDispatcher } from 'svelte';
 
-    const domain = "https://api.ulfbuilt.com";
+    const domain = "https://vwapi.netdevs.net";
     export let preHeading; 
     export let heading; 
     export let btnTitle;

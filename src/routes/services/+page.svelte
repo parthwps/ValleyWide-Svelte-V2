@@ -3,7 +3,7 @@
 	import { Container, Row, Col } from 'sveltestrap';
 	import Cta from '$lib/components/layout/Cta.svelte';
 	import PageBanner from '$lib/components/layout/PageBanner.svelte';
-	const url = 'https://api.ulfbuilt.com/';
+	const url = 'https://vwapi.netdevs.net/';
 	let page = data.services.data.attributes;
 	let seo = page.seo;
 	import Seo from '$lib/components/Seo.svelte';

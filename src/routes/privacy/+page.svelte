@@ -8,7 +8,7 @@
 	import PageBanner from '$lib/components/layout/PageBanner.svelte';
     // import { fade, fly } from "svelte/transition";
     import { textAnimate, fly, fadeIn, slide } from '$lib/GsapAnimation.js';
-    const url = "https://api.ulfbuilt.com/";
+    const url = "https://vwapi.netdevs.net/";
 
     import { onMount } from "svelte";
 	import { loadingCursor } from '$lib/cursorChange.js';

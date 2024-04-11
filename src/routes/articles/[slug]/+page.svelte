@@ -3,7 +3,7 @@
     import Cta from '$lib/components/layout/Cta.svelte';
     import { textAnimate, fly, fadeIn, slide } from '$lib/GsapAnimation.js';
     export let data;
-    const url = 'https://api.ulfbuilt.com';
+    const url = 'https://vwapi.netdevs.net';
 
     $: num = data.num;
     $: num2 = data.num+3;
