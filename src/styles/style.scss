@@ -340,12 +340,8 @@ header {
 	&.changeBG {
 		.logo-container {
 			background: $newheader;
-			padding: 0.25rem 0.75rem;
-			box-shadow: 0 0 10px #333;
-			margin-top: -0.75rem;
 		}
 		.logo {
-			height: 5rem;
 			position: relative;
 		}
 		background: $newheader;
@@ -358,8 +354,6 @@ header {
 			}
 		}
 		.navbar-brand {
-			height: 2.75rem;
-			width: 7.5rem;
 			position: relative;
 		}
 	}
@@ -427,9 +421,8 @@ header {
 	}
 	nav {
 		.navbar-brand {
-			width: 4.5rem;
-			min-width: 4.5rem;
-			padding-top: 0.75rem;
+			width: 14rem;
+			padding: 1.5rem 0;
 			a {
 				img {
 					width: auto;
