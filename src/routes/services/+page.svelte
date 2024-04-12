@@ -107,17 +107,19 @@
 				<div class="service-b__service-box">
 					<div class="service-b__service-box__service-box-inner">
 						<div class="service-b__service-box__service-box-inner__service-icon">
+							{#if page.section1item3icon.data}
 							<img
 								loading="lazy"
 								in:fadeIn
 								gsap-start="top 90%"
 								id="about_icon3"
 								gsap-duration="2"
-								src="{url}{page.section1item3icon.data.attributes.url}"
+								src="{url}{page.section1item3icon.data.attributes.url ? page.section1item3icon.data.attributes.url : ''}"
 								alt={page.section1item3heading}
 								width={page.section1item3icon.data.attributes.width}
 								height={page.section1item3icon.data.attributes.height}
 							/>
+							{/if}
 						</div>
 						<h4 in:slide gsap-start="top 90%" id="about_title_icon3" gsap-duration="2">
 							{page.section1item3heading ? page.section1item3heading : ''}
@@ -132,17 +134,19 @@
 				<div class="service-b__service-box">
 					<div class="service-b__service-box__service-box-inner">
 						<div class="service-b__service-box__service-box-inner__service-icon">
+							{#if page.section1item4icon.data && page.section1item4icon.data.attributes}
 							<img
 								loading="lazy"
 								in:fadeIn
 								gsap-start="top 90%"
 								id="about_icon4"
 								gsap-duration="2"
-								src="{url}{page.section1item4icon.data.attributes.url}"
+								src="{url}{page.section1item4icon.data.attributes.url ? page.section1item4icon.data.attributes.url : ''}"
 								alt={page.section1item4heading}
 								width={page.section1item4icon.data.attributes.width}
 								height={page.section1item4icon.data.attributes.height}
 							/>
+							{/if}
 						</div>
 						<h4 in:slide gsap-start="top 90%" id="about_title_icon4" gsap-duration="2">
 							{page.section1item4heading ? page.section1item4heading : ''}

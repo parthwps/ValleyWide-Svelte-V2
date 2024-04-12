@@ -90,6 +90,7 @@
 		<Row noGutters>
 			<Col md="6" class="tm-img">
 				<div>
+					{#if ourTeam.team_member_owner.data.attributes.memberPhoto && ourTeam.team_member_owner.data.attributes.memberPhoto.data && ourTeam.team_member_owner.data.attributes.memberPhoto.data.attributes && ourTeam.team_member_owner.data.attributes.memberPhoto.data.attributes.formats}
 					<img
 						in:fadeIn
 						id="owner_image"
@@ -100,6 +101,7 @@
 								.url ||
 							domain + ourTeam.team_member_owner.data.attributes.memberPhoto.data.attributes.url}
 					/>
+					{/if}
 					<div class="tm-box wtc">
 						<h3 class="pfont" in:slide id="owner_name" gsap-duration="1.5" gsap-x="-5">
 							{ourTeam.team_member_owner.data.attributes.name
@@ -162,6 +164,7 @@
 								on:click={() => getMemberIndex(index)}
 								on:click={() => (showModal = true)}
 							>
+							{#if member.attributes.memberPhoto && member.attributes.memberPhoto.data && member.attributes.memberPhoto.data.attributes && member.attributes.memberPhoto.data.attributes.formats}
 								<img
 									in:fadeIn
 									id="member_image{index}"
@@ -174,6 +177,7 @@
 										domain + member.attributes.memberPhoto.data.attributes.url}
 									alt="member"
 								/>
+								{/if}
 
 								<div class="tm-box wtc px-5 py-3" style="bottom: 1rem;">
 									<!-- our-team__member_caption class removed -->

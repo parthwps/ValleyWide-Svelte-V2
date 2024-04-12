@@ -80,8 +80,9 @@
 	metaViewport = {seodata.seo[0].metaViewport}
 	canonicalURL = {seodata.seo[0].canonicalURL} />
 </svelte:head>
-
+{#if data.page.data.attributes.Cover.data}
 <PageBanner title="{data.page.data.attributes.title ? data.page.data.attributes.title : 'Articles & Press'}" extraClass="articles" subTitle="{data.page.data.attributes.Subheading ? data.page.data.attributes.Subheading : ''}"  banner="{url}{data.page.data.attributes.Cover.data[0].attributes.formats.large_x2.url ? data.page.data.attributes.Cover.data[0].attributes.formats.large_x2.url  : data.page.data.attributes.Cover.data[0].attributes.url}"/>
+{/if}
 <section class="category">
     <!-- <Animate> -->
         <Container>
