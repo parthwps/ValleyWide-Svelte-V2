@@ -145,7 +145,6 @@
 	extraClass="homebanner"
 	bannerheight="100"
 	customtop="custom-top"
-	transparent="1"
 />
 <section
 	class="loc-gallery mvw-10"
