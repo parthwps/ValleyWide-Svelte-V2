@@ -173,7 +173,7 @@ let seodata = portfolio;
                         {/if}
                     {/key}
                 </div>
-                <div class="paginate-section">
+                <!-- <div class="paginate-section">
                     <LightPaginationNav
                     totalItems="{portfolioList.length}"
                     pageSize="{pageSize}"
@@ -182,7 +182,7 @@ let seodata = portfolio;
                     showStepOptions="{true}"
                     on:setPage="{handlePageChange}"
                     />
-                </div>
+                </div> -->
             </Col>
         </Row>
     </Container>
@@ -240,6 +240,7 @@ let seodata = portfolio;
             margin: 0 auto 3rem;
         }
         .categories__tabs__heading{
+            display: none;
             ul{
                 display: flex;
                 width: 90%;

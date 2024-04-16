@@ -42,18 +42,6 @@
 		"src/routes/our-team/[slug]/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
-	"/page2": [
-		"src/routes/+layout.server.ts"
-	],
-	"/page3": [
-		"src/routes/+layout.server.ts"
-	],
-	"/page4": [
-		"src/routes/+layout.server.ts"
-	],
-	"/page": [
-		"src/routes/+layout.server.ts"
-	],
 	"/portfolio": [
 		"src/routes/portfolio/+page.server.ts",
 		"src/routes/+layout.server.ts"
