@@ -701,8 +701,7 @@ header {
 				&:hover,
 				&:focus,
 				&:active {
-					background-color: #bfefff;
-					color: $secondary-color;
+					background-color: rgba(255, 255, 255, 0.3);
 				}
 			}
 		}
@@ -711,6 +710,9 @@ header {
 	.navbar-nav .show > .nav-link {
 		color: #fff;
 		background-color: rgba(255, 255, 255, 0.3);
+		&:hover{
+			background-color: rgba(255, 255, 255, 0.4);
+		}
 	}
 }
 
