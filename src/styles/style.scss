@@ -261,8 +261,9 @@ img {
 	}
 }
 .btn-secondary {
-	background-color: $secondary-color;
+	background-color: $newheader;
 	border: 1px solid $secondary-color;
+	font-family: $secondary-font;
 	color: #fff;
 	width: fit-content;
 	&:hover {

@@ -184,7 +184,7 @@
 	</Container>
 </section>
 
-<section class="flex-column-center" id="tnr">
+<section class="p-0 flex-column-center" id="tnr">
 	<div class="tnr">
 		<ParallaxImage
 			imageHeight="80"
@@ -199,12 +199,12 @@
 		<div class="tnr__wrapper">
 			<Container>
 				<div class="tnr__wrapper__captions text-div">
-					<h2 class="text-animate" in:textAnimate id="tnr-heading" gsap-duration="1">
-						{home.midBanner.heading ? home.midBanner.heading : ''}
-					</h2>
 					<p in:slide id="tnr-preheading" gsap-duration="1">
 						{@html home.midBanner.paragraph ? home.midBanner.paragraph : ''}
 					</p>
+					<h2 class="text-animate" in:textAnimate id="tnr-heading" gsap-duration="1">
+						{home.midBanner.heading ? home.midBanner.heading : ''}
+					</h2>
 					<div in:fly id="tnr-button" gsap-delay="0.5" gsap-duration="1.2" gsap-y="50">
 						<a href={home.midBanner.btnUrl ? home.midBanner.btnUrl : '#'} class="btn btn-secondary">
 							{home.midBanner.btnTitle ? home.midBanner.btnTitle : 'Button'}
@@ -879,8 +879,7 @@
 				position: relative;
 				display: flex;
 				align-items: center;
-				justify-content: end;
-				text-align: right;
+				// text-align: right;
 			}
 			@include media-max(sm) {
 				margin-bottom: 0;
@@ -896,8 +895,8 @@
 				display: flex;
 				justify-content: center;
 				&__captions {
-					background: rgba(0, 0, 0, 0.65);
-					padding: 20px 50px 40px;
+					background: rgba(51, 51, 51, 0.7);
+					padding: 50px 40px;
 					display: flex;
 					flex-direction: column;
 					@include media-max(ipadmini) {
@@ -912,7 +911,7 @@
 					}
 					#tnr-preheading {
 						max-width: 44rem;
-						margin-bottom: 2rem;
+						margin-bottom: 0;
 						line-height: 1.75;
 						text-align: justify;
 						@include media-max(sm) {
@@ -935,7 +934,7 @@
 				}
 				h2 {
 					font-family: $primary-font;
-					margin: 1rem 0 2rem;
+					margin: 0 0 1rem;
 					text-transform: uppercase;
 					font-size: 2.5rem;
 					@include media-max(sm) {
