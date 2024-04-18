@@ -77,8 +77,9 @@
 					font-weight: 400;
 					// font-size: 5rem;		
 					font-size: 3.5rem;		
-					margin-bottom: 1rem;	
+					margin: 0 auto 1rem auto;
 					justify-content: center;
+					max-width: 60rem;
 					@include media-max(sm) {
 						font-size: 3rem;
 					}

@@ -348,7 +348,7 @@ header {
 		.dropdown.show,
 		.dropdown-menu {
 			// background-color: $gray;
-			background-color: $darkbluegreen;
+			// background-color: $darkbluegreen;
 			a {
 				color: $white-color;
 			}
@@ -673,20 +673,20 @@ header {
 		.dropdown.show {
 			// background-color: rgb(216 215 215 / 50%);
 			// background-color: rgba(242, 237, 237, 0.20);
-			background-color: $darkbluegreen;
+			// background-color: $darkbluegreen;
 			.dropdown-toggle {
 				&:hover,
 				&:focus,
 				&:active {
 					color: $white-color;
-					background-color: #666;
+					// background-color: #666;
 				}
 			}
 		}
 		.dropdown-menu {
 			// background-color: rgb(216 215 215 / 50%);
 			// background-color: rgba(242, 237, 237, 0.20);
-			background-color: $darkbluegreen;
+			background-color: rgba(255, 255, 255, 0.2);
 			border-radius: 0;
 			width: 100%;
 			border: none;
@@ -710,7 +710,7 @@ header {
 	.navbar-nav .nav-link.active,
 	.navbar-nav .show > .nav-link {
 		color: #fff;
-		background-color: #666;
+		background-color: rgba(255, 255, 255, 0.3);
 	}
 }
 
