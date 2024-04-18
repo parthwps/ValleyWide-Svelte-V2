@@ -457,7 +457,7 @@ align-items: end;
 	}	
 	.loc-gallery{
 		h2{
-			font-family: $secondary-font;
+			font-family: $primary-font;
 			margin-bottom: 1rem;
 			color: $secondary-color;
 			margin-bottom: 3rem;

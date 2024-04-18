@@ -3,7 +3,7 @@
 	import { lazyLoad } from '$lib/components/lazyload.js';
 	import { Col, Container, Row } from 'sveltestrap';
 	import Seo from '$lib/components/Seo.svelte';
-	import Carousel4 from '$lib/components/layout/Carousel4.svelte';
+	import Carousel from '$lib/components/layout/Carousel.svelte';
 	import ParallaxImage from '$lib/components/parallaxImage.svelte';
 	import Cta from '$lib/components/layout/Cta.svelte';
 	import PageBanner from '$lib/components/layout/PageBanner.svelte';
@@ -174,7 +174,7 @@
 
 <section class="featured-projects mvw-10" id="featured-section">
 	<Container class="featured-container">
-		<Carousel4
+		<Carousel
 			preHeading={home.featuredProjectsPreHeading ? home.featuredProjectsPreHeading : ''}
 			heading={home.featuredProjectsHeading ? home.featuredProjectsHeading : ''}
 			btnTitle={home.featurePropertyBtnTitle ? home.featurePropertyBtnTitle : 'Button'}
@@ -602,8 +602,7 @@
 			}
 		}
 		h2 {
-			font-family: $secondary-font;
-			margin-bottom: 1rem;
+			font-family: $primary-font;
 			color: $white-color;
 			margin-bottom: 3rem;
 			font-size: 3rem;

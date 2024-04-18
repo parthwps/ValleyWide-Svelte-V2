@@ -39,7 +39,7 @@
 <style lang="scss">
 .content{
     h2 {
-        color: $secondary-color;
+        color: $black-color;
         justify-content: center;
     }
     :global(p){
@@ -49,7 +49,7 @@
         padding-bottom: 0.971rem;
         font-size: 2.25rem;
         font-feature-settings: 'pnum' on, 'lnum' on;
-        color: $figmablack;
+        color: $black-color;
         font-weight: 400;
     }         
     :global(img){

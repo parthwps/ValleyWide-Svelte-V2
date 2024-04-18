@@ -312,7 +312,7 @@
 					transition: 1.5s;
 					h5,
 					p {
-						color: $figmablack;
+						color: $black-color;
 					}
 				}
 			}
