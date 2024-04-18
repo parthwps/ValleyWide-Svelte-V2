@@ -262,14 +262,14 @@ img {
 }
 .btn-secondary {
 	background-color: $newheader;
-	border: 1px solid $secondary-color;
+	border: 1px solid $newheader;
 	font-family: $secondary-font;
 	color: #fff;
 	width: fit-content;
 	&:hover {
-		background-color: $primary-color;
-		border: 1px solid $primary-color;
-		color: #000;
+		background-color: $secondary-color;
+		border: 1px solid $secondary-color;
+		color: $white-color;
 	}
 }
 .btn-inverted {

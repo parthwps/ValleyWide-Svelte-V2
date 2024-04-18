@@ -33,7 +33,7 @@
 
 <style lang="scss">
 	.transparent{
-		box-shadow: inset 0 0 0 50vw rgba(0,0,0,0.5);
+		box-shadow: inset 0 0 0 50vw rgba(0,0,0,0.3);
 	}
 	.banner{
 		background-image: var(--banner);

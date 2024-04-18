@@ -248,7 +248,7 @@
 							{home.reputation.preHeading ? home.reputation.preHeading : ''}
 						</p>
 						<h2
-							class="text-animate secondary-font"
+							class="text-animate primary-font stc"
 							gsap-duration="1"
 							in:textAnimate
 							id="reputation-heading"
@@ -335,7 +335,7 @@
 							{home.ourProcessPreHeading ? home.ourProcessPreHeading : ''}
 						</p>
 						<h2
-							class="text-animate secondary-font"
+							class="text-animate primary-font stc"
 							in:textAnimate
 							gsap-duration="1"
 							id="process-heading"
@@ -397,7 +397,7 @@
 							{home.ourStoryPreHeading ? home.ourStoryPreHeading : ''}
 						</p>
 						<h2
-							class="text-animate secondary-font"
+							class="text-animate primary-font stc"
 							in:textAnimate
 							id="story-heading"
 							gsap-duration="1"
@@ -1002,7 +1002,7 @@
 			position: relative;
 			&:after {
 				position: absolute;
-				background: #e5eef2;
+				background: $primary-color;
 				width: 135%;
 				top: 5%;
 				content: '';
@@ -1039,7 +1039,7 @@
 					margin-bottom: 2rem;
 				}
 				.pre-head {
-					color: $third-color;
+					color: $black-color;
 					margin-bottom: 1rem;
 					font-weight: 500;
 				}
@@ -1159,7 +1159,7 @@
 			position: relative;
 			&:after {
 				position: absolute;
-				background: #f2f2f2;
+				background: $primary-color;
 				width: 135%;
 				content: '';
 				height: 100%;
@@ -1188,7 +1188,7 @@
 					padding-right: 1.375rem;
 				}
 				.pre-head {
-					color: $third-color;
+					color: $black-color;
 					margin-bottom: 1rem;
 					font-weight: 500;
 				}
@@ -1279,7 +1279,7 @@
 			position: relative;
 			&:after {
 				position: absolute;
-				background: #e5eef2;
+				background: $primary-color;
 				width: 135%;
 				content: '';
 				height: 90%;
@@ -1313,7 +1313,7 @@
 					padding: 0 1.375rem;
 				}
 				.pre-head {
-					color: $third-color;
+					color: $black-color;
 					margin-bottom: 1rem;
 					font-weight: 500;
 				}
