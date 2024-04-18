@@ -61,7 +61,7 @@
             z-index: 10;
         }
 		.custom-top{
-			margin-top: -8rem;
+			// margin-top: -8rem;
 			@include media-max(sm) {
 				margin-top: -12rem;
 			}
