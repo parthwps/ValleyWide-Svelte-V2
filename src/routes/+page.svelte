@@ -138,10 +138,13 @@
 <PageBanner
 	title={home.topBanner.heading ? home.topBanner.heading : 'Building Excellence'}
 	subTitle={home.topBanner.paragraph ? home.topBanner.paragraph : ''}
-	banner="{domain}{home.topBanner.background.data.attributes.formats.large_x2.url
-		? home.topBanner.background.data.attributes.formats.large_x2.url
+	banner="{domain}{home.topBanner.background.data.attributes.formats.large.url
+		? home.topBanner.background.data.attributes.formats.large.url
 		: home.topBanner.background.data.attributes.url}"
 	bannerMobile="{domain}{home.topBanner.background.data.attributes.formats.medium.url}"
+	bannerSmall="{domain}{home.topBanner.background.data.attributes.formats.small.url
+		? home.topBanner.background.data.attributes.formats.small.url
+		: home.topBanner.background.data.attributes.url}"
 	extraClass="homebanner"
 	bannerheight="100"
 	customtop="custom-top"

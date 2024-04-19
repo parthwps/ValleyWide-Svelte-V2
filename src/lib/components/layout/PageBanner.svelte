@@ -1,19 +1,67 @@
 <script lang="ts">
     import { Container, Row, Col } from "sveltestrap";
 	import { textAnimate, fly, fadeIn } from '$lib/GsapAnimation.js';
+	import { onMount, afterUpdate } from 'svelte';
     export let banner;
+	export let bannerMobile;
+	export let bannerSmall;
 	export let customtop;
 	export let transparent;
-	export let bannerMobile;
     export let title;
 	export let bannerheight;
     export let subTitle;
     export let extraClass;
-	let pageBanner = banner;
+
 	let pageBannerheight = 60;
+
+
+	let backgroundImage = banner;
+	let backgroundSize = 'small';
+    let backgroundLoaded = false;
+  
+     // Function to check if the background image has loaded
+	 function checkImageLoaded() {
+        const image = new Image();
+        image.src = backgroundImage;
+        image.onload = () => {
+            backgroundLoaded = true;
+        };
+    }
+
+    // Function to handle loading the background image
+    function handleBackgroundLoad() {
+        checkImageLoaded();
+		console.log("tested");
+
+        switch (backgroundSize) {
+            case 'small':
+                backgroundSize = 'medium';
+                backgroundImage = 'https://vwapi.netdevs.net/uploads/medium_Heritage_Park_aerials_67421907fe.webp';
+                break;
+            case 'medium':
+                backgroundSize = 'large';
+                backgroundImage = 'https://vwapi.netdevs.net/uploads/large_x2_Heritage_Park_aerials_67421907fe.webp';
+                break;
+        }
+    }
+
+    // Reset backgroundLoaded when changing background image source
+    $: {
+        backgroundLoaded = false;
+    }
+
+    // Call handleBackgroundLoad initially
+    onMount(() => {
+        handleBackgroundLoad();
+    });
+
+    // Call handleBackgroundLoad after each update
+    afterUpdate(() => {
+        handleBackgroundLoad();
+    });
 </script>
 
-<section in:fadeIn id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({pageBanner}); height: {pageBannerheight}vh;" rel = "preload">
+<section in:fadeIn id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({backgroundImage}); height: {pageBannerheight}vh;" rel="preload">
 	<!-- <div class="banner_overlay" in:fadeOut id="banner_overlay" gsap-duration="0" gsap-delay="0"></div> -->
 	<Container>
 		<Row>

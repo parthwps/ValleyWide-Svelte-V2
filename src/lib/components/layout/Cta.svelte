@@ -31,21 +31,15 @@
 <!-- <Animate> -->
 	<section class="home-cta" id="cta-section" in:bgZoom gsap-scale="1.5">
 		<div class="home-cta-bg bg" id="cta-section-bg" style="--cta-banner: url({domain}{ctaData.backgroundImage.data.attributes.formats.large_x2.url ? ctaData.backgroundImage.data.attributes.formats.large_x2.url : ctaData.backgroundImage.data.attributes.url})"></div>
-		<Container>
-			<Row>
-				<Col class="text-center">
-					<div class="home-cta__container">
-						<div class="home-cta__wrapper">
-							<h2 class="text-animate secondary-font" in:textAnimate id="global_cta_title" gsap-duration="1">{ctaData.heading ? ctaData.heading : ''}</h2>
-							<div in:fly id="global_cta_cont" gsap-delay="0.5" gsap-duration="1.2"  gsap-y="30">
-								{@html ctaData.paragraph ? ctaData.paragraph : ''}
-								<a href="{ctaData.btnUrl ? ctaData.btnUrl : '#'}" class="btn btn-secondary">{ctaData.btnTitle ? ctaData.btnTitle : 'Button'}</a>
-							</div>
-						</div>
+			<div class="home-cta__container">
+				<div class="home-cta__wrapper">
+					<h2 class="text-animate secondary-font" in:textAnimate id="global_cta_title" gsap-duration="1">{ctaData.heading ? ctaData.heading : ''}</h2>
+					<div in:fly id="global_cta_cont" gsap-delay="0.5" gsap-duration="1.2"  gsap-y="30">
+						{@html ctaData.paragraph ? ctaData.paragraph : ''}
+						<a href="{ctaData.btnUrl ? ctaData.btnUrl : '#'}" class="btn btn-secondary">{ctaData.btnTitle ? ctaData.btnTitle : 'Button'}</a>
 					</div>
-				</Col>
-			</Row>
-		</Container>
+				</div>
+			</div>
 	</section>
 <!-- </Animate>	 -->
 {/await}
@@ -60,8 +54,6 @@
 		.home-cta-bg {
 			background-image: var(--cta-banner);
 			background-size: cover;
-			// min-height: 20vh;
-			// background-attachment: fixed;
 			background-position: center;
 			position: absolute;
 			left: 0;
@@ -82,6 +74,12 @@
 			justify-content: center;
 		}
 		&__wrapper {
+			z-index: 1;
+			padding: 2rem;
+			text-align: center;
+			width: 100%;
+			max-width: 50rem;
+			background-color: $white-color;
 			h2{
 				color: #000;
 				margin-bottom: 2rem;
