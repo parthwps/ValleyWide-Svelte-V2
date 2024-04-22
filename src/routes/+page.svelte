@@ -621,7 +621,7 @@
 			max-width: 45rem;
 			margin: auto;
 			padding: 4rem 4rem 5rem 4rem;
-			box-shadow: 0px 0px 10px #444;
+			box-shadow: 0px 0px 10px #ccc;
 			border-radius: 0.5rem;
 			background: #fff;
 			z-index: 1;
