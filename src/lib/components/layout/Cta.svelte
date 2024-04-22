@@ -33,7 +33,7 @@
 		<div class="home-cta-bg bg" id="cta-section-bg" style="--cta-banner: url({domain}{ctaData.backgroundImage.data.attributes.formats.large_x2.url ? ctaData.backgroundImage.data.attributes.formats.large_x2.url : ctaData.backgroundImage.data.attributes.url})"></div>
 			<div class="home-cta__container">
 				<div class="home-cta__wrapper">
-					<h2 class="text-animate secondary-font" in:textAnimate id="global_cta_title" gsap-duration="1">{ctaData.heading ? ctaData.heading : ''}</h2>
+					<h2 class="text-animate primary-font stc" in:textAnimate id="global_cta_title" gsap-duration="1">{ctaData.heading ? ctaData.heading : ''}</h2>
 					<div in:fly id="global_cta_cont" gsap-delay="0.5" gsap-duration="1.2"  gsap-y="30">
 						{@html ctaData.paragraph ? ctaData.paragraph : ''}
 						<a href="{ctaData.btnUrl ? ctaData.btnUrl : '#'}" class="btn btn-secondary">{ctaData.btnTitle ? ctaData.btnTitle : 'Button'}</a>
@@ -75,13 +75,12 @@
 		}
 		&__wrapper {
 			z-index: 1;
-			padding: 2rem;
+			padding: 4rem 3rem;
 			text-align: center;
 			width: 100%;
 			max-width: 50rem;
 			background-color: $white-color;
 			h2{
-				color: #000;
 				margin-bottom: 2rem;
 				font-size: 2.5rem;
 				justify-content: center;

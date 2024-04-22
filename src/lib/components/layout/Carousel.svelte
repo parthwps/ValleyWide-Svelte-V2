@@ -256,6 +256,14 @@ height: 32rem;
 min-height: 32rem;
 overflow: hidden;
 display: inline-block;
+.slider-container__carousel-cell__text{
+      span {
+        color: #CF9B14;
+      }
+      path {
+        stroke: #CF9B14;
+      }  
+    }   
 &:hover{
     .slider-container__carousel-cell__text{
       background: $newheader;

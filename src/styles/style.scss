@@ -82,6 +82,9 @@ p:last-child {
 .wtc {
 	color: $white-color;
 }
+.btc{
+	color: $black-color;
+}
 .gtc {
 	color: #aaa;
 }
@@ -273,14 +276,14 @@ img {
 	}
 }
 .btn-inverted {
-	background-color: transparent;
-	border: 1px solid $secondary-color;
-	color: $secondary-color;
+	background-color: #F2F0E9;
+	border: 2px solid #CBC9C9;
+	font-family: $secondary-font;
+	color: $black-color;
 	&:hover {
-		background-color: $secondary-color;
-		border: 1px solid $secondary-color;
+		background-color: $newheader;
+		border: 2px solid $newheader;
 		color: #fff;
-		border-color: #fff;
 	}
 }
 .btn {
@@ -506,7 +509,6 @@ header {
 			position: fixed;
 			top: 0;
 			right: 0;
-			// background: #E5EEF2;
 			width: 80vw;
 			max-width: 20rem;
 			height: 100vh;
@@ -816,7 +818,7 @@ header {
 .blue-bar {
 	display: flex;
 	align-items: center;
-	background-color: $secondary-color;
+	background-color: rgba(61, 61, 61, 0.8);
 	color: #fff;
 	padding: 0.5rem 1.125rem 0.625rem 0.5rem;
 	position: absolute;
@@ -834,7 +836,7 @@ header {
 		bottom: 0.5rem;
 	}
 	&:hover {
-		background: $primary-color;
+		background: $newheader;
 		span {
 			color: $white-color;
 		}
@@ -842,8 +844,11 @@ header {
 			stroke: $white-color;
 		}
 	}
+	path{
+		stroke: #CF9B14;
+	}
 	span {
-		color: $primary-color;
+		color: #CF9B14;
 		font-size: 1.2rem;
 		margin: 0 0.8rem 0;
 		@include media-max(sm) {

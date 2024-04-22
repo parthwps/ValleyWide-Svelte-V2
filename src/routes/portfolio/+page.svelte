@@ -192,8 +192,8 @@ let seodata = portfolio;
             <Row>
                 <Col class="text-center ">
                     <div class="portfolio-cta__content">
-                        <p in:slide id="portfolio-cta-preheading" gsap-duration="1.5" gsap-start="top 90%">{portfolio.ourApproachPreHeading ? portfolio.ourApproachPreHeading : ''}</p>
-                        <h2 class="text-animate secondary-font" in:textAnimate id="portfolio-cta-heading" gsap-duration="1.5" gsap-start="top 90%">{@html portfolio.ourApproachHeading ? portfolio.ourApproachHeading : ''}</h2>                 
+                        <p in:slide id="portfolio-cta-preheading" class="btc" gsap-duration="1.5" gsap-start="top 90%">{portfolio.ourApproachPreHeading ? portfolio.ourApproachPreHeading : ''}</p>
+                        <h2 class="text-animate primary-font stc" in:textAnimate id="portfolio-cta-heading" gsap-duration="1.5" gsap-start="top 90%">{@html portfolio.ourApproachHeading ? portfolio.ourApproachHeading : ''}</h2>                 
                     </div>
                     <div class="portfolio-cta__btns" gsap-start="top top" in:fly id="portfolio-cta-button" gsap-delay="1" gsap-duration="1.5" >
                         <a href="{portfolio.ourApproachLeftBtnUrl ? portfolio.ourApproachLeftBtnUrl : '#'}" class="btn btn-secondary">{portfolio.ourApproachLeftBtnTitle ? portfolio.ourApproachLeftBtnTitle : 'Button'}</a>
@@ -419,9 +419,8 @@ let seodata = portfolio;
               
         &__content{
             h2 {
-                // flex-wrap: wrap;
-                justify-content: center;
-                // width: 39rem;
+                max-width: 40rem;
+                margin: auto;
             }
             p{
                 color: $third-color;

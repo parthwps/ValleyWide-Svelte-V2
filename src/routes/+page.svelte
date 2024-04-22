@@ -151,7 +151,6 @@
 />
 <section
 	class="loc-gallery mvw-10"
-	style=" --loc-bg: url({locbg})"
 	in:slowDownSection
 	id="loc-gallery"
 	gsap-start="top bottom"
@@ -576,8 +575,9 @@
 		// background: $secondary-color;
 		// background-color: rgba(38,58,99,0.5);
 		// background: var(--loc-bg);
-		background-color: rgba(38, 58, 99, 0.7); /* Fallback color */
-		background: var(--loc-bg, rgba(38, 58, 99, 0.7));
+		background-color: rgba(255, 255, 255); /* Fallback color */
+		// background: var(--loc-bg, rgba(38, 58, 99, 0.7));
+		// style=" --loc-bg: url({locbg})"
 		padding: 0;
 		margin: 0;
 		position: relative;
@@ -588,7 +588,8 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(38, 58, 99, 0.7); /* Adjust color and opacity */
+			background-color: $primary-color;
+			// background-color: rgba(38, 58, 99, 0.7); /* Adjust color and opacity */
 			z-index: 0;
 		}
 		:global(.container) {
@@ -606,7 +607,7 @@
 		}
 		h2 {
 			font-family: $primary-font;
-			color: $white-color;
+			color: $secondary-color;
 			margin-bottom: 3rem;
 			font-size: 3rem;
 			justify-content: center;

@@ -46,10 +46,10 @@
 		<Row>
 			<Col class="text-center">
 				<div class="portfolio-gallery__content">
-					<p class="pre-head" in:slide id="single-portfolio-preheading" gsap-duration="1">
+					<p class="pre-head mb-4" in:slide id="single-portfolio-preheading" gsap-duration="1">
 						Project
 					</p>
-					<h2 class="text-animate secondary-font" in:textAnimate id="single-portfolio-heading">
+					<h2 class="text-animate primary-font" in:textAnimate id="single-portfolio-heading">
 						{title ? title : ''}
 					</h2>
 					<div in:fadeIn id="single-portfolio-cont" gsap-delay="0.5" gsap-duration="1.5">
@@ -286,17 +286,16 @@
 		background-color: rgba(242, 237, 237, 0.2) !important;
 	}
 	.portfolio-gallery {
-		padding: 8vw 0 10vw;
+		padding: 7rem 0 10vw;
 		margin-top: 0;
-		@include media-min(sm) {
-			background-color: #efeff0;
-		}
 		margin-bottom: 0;
 		overflow-x: hidden;
 		&:before {
 			content: '';
 			display: block;
-			background: #1e2d39;
+			background-image: linear-gradient($newheader, rgba(122, 120, 116, 0.4), $white-color), url('$lib/img/portfolio-background.webp');
+			background-size: cover;
+    		background-position: center;
 			width: 100%;
 			height: 60rem;
 			position: absolute;
@@ -311,7 +310,7 @@
 		}
 		&__content {
 			padding: 4vw 2.375rem 2rem;
-			border-top: 1px solid #4e4e4e;
+			border-top: 1px solid #CBC9C9;
 
 			z-index: 1;
 			position: relative;

@@ -110,7 +110,7 @@ function lazy(node, data) {
                     <img loading="lazy" src={domain}{image.attributes.formats.small.url} use:lazy="{{src: 'https://vwapi.netdevs.net'+highRes}}"  alt="{image.attributes.alternativeText ? image.attributes.alternativeText : ''}" />         
                     <a href="{domain}{image.attributes.url}?download" class="download" download>
                       <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="27.501" cy="27.5" r="27.5" fill="#1E2D39"/>
+                        <circle cx="27.501" cy="27.5" r="27.5" fill="#705144"/>
                         <path d="M28.501 16.5C28.501 15.9477 28.0533 15.5 27.501 15.5C26.9487 15.5 26.501 15.9477 26.501 16.5L28.501 16.5ZM26.7939 39.2071C27.1844 39.5976 27.8176 39.5976 28.2081 39.2071L34.572 32.8431C34.9626 32.4526 34.9626 31.8195 34.572 31.4289C34.1815 31.0384 33.5484 31.0384 33.1578 31.4289L27.501 37.0858L21.8441 31.4289C21.4536 31.0384 20.8204 31.0384 20.4299 31.4289C20.0394 31.8195 20.0394 32.4526 20.4299 32.8431L26.7939 39.2071ZM26.501 16.5L26.501 38.5L28.501 38.5L28.501 16.5L26.501 16.5Z" fill="white"/>
                       </svg>                        
                     </a>
