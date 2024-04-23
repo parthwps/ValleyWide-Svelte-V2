@@ -55,7 +55,7 @@
 		<Row>
 			<Col md="10" class="mx-auto">
 				<h2
-					class="stc pb-4 text-center text-animate secondary-font"
+					class="stc pb-4 text-center text-animate primary-font"
 					in:textAnimate
 					id="team_heading"
 					gsap-duration="1.5"
@@ -103,12 +103,12 @@
 					/>
 					{/if}
 					<div class="tm-box wtc">
-						<h3 class="pfont" in:slide id="owner_name" gsap-duration="1.5" gsap-x="-5">
+						<h3 class="sfont" in:slide id="owner_name" gsap-duration="1.5" gsap-x="-5">
 							{ourTeam.team_member_owner.data.attributes.name
 								? ourTeam.team_member_owner.data.attributes.name
 								: ''}
 						</h3>
-						<h4 class="pfont" in:slide id="owner_title" gsap-duration="1.5" gsap-x="-5">
+						<h4 class="sfont" in:slide id="owner_title" gsap-duration="1.5" gsap-x="-5">
 							{ourTeam.team_member_owner.data.attributes.position
 								? ourTeam.team_member_owner.data.attributes.position
 								: ''}
@@ -182,7 +182,7 @@
 								<div class="tm-box wtc px-5 py-3" style="bottom: 1rem;">
 									<!-- our-team__member_caption class removed -->
 									<h5
-										class="pfont"
+										class="sfont"
 										in:slide
 										id="member_name{index}"
 										gsap-duration=".5"
@@ -191,7 +191,7 @@
 										{member.attributes.name}
 									</h5>
 									<p
-										class="pfont"
+										class="sfont"
 										in:slide
 										id="member_title{index}"
 										gsap-duration=".5"
@@ -213,7 +213,7 @@
 								{/if}
 							</div>
 							<div class="memberModal__details">
-								<h5 class="pfont">{@html memberName ? memberName : ''}</h5>
+								<h5 class="pfont stc">{@html memberName ? memberName : ''}</h5>
 								<p class="position">{memberPosition ? memberPosition : ''}</p>
 								{#if memberContent}
 									<p class="content" on:mousewheel={stopScroll}>{@html memberContent}</p>
@@ -231,11 +231,11 @@
 		<div>
 			<h4>{ourTeam.para2 ? ourTeam.para2 : ''}</h4>
 			<h4>{ourTeam.para3 ? ourTeam.para3 : ''}</h4>
-			<h4>
+			<h3 class="stc">
 				{ourTeam.team_member_owner.data.attributes.name
 					? ourTeam.team_member_owner.data.attributes.name
 					: ''}
-			</h4>
+			</h3>
 		</div>
 	</Container>
 </section>
@@ -359,7 +359,7 @@
 		position: absolute;
 		z-index: 6;
 		bottom: 2rem;
-		background-color: #1e2d39;
+		background-color: $secondary-color;
 		padding: 0.65rem 2rem 0.8rem !important;
 		width: 90%;
 		line-height: 0.5;
@@ -387,7 +387,7 @@
 		}
 	}
 	.owner-quote {
-		background-color: #e3ceb5;
+		background-color: $primary-color;
 		height: 100%;
 		display: flex;
 		h3 {
@@ -443,7 +443,7 @@
 		// }
 		
 		h4 {
-			font-family: $primary-font;
+			font-family: $secondary-font;
 			font-weight: 400;
 			padding-bottom: 2rem;
 			line-height: 2.375rem;
@@ -519,7 +519,7 @@
 		&__details {
 			width: 60%;
 			min-width: 60%;
-			background-color: $lightblue;
+			background-color: $primary-color;
 			padding: 2.5rem 2.5rem 2.5rem 5.5rem;
 			box-shadow: 6px 8px 9px rgba(166, 184, 191, 0.2);
 			margin-left: -3rem;
@@ -554,9 +554,6 @@
 				}
 				@include media-max(sm) {
 					font-size: 1.8rem;
-				}
-				:global(span) {
-					color: $primary-color;
 				}
 			}
 

@@ -572,12 +572,7 @@
 		color: $primary-color;
 	}
 	.loc-gallery {
-		// background: $secondary-color;
-		// background-color: rgba(38,58,99,0.5);
-		// background: var(--loc-bg);
-		background-color: rgba(255, 255, 255); /* Fallback color */
-		// background: var(--loc-bg, rgba(38, 58, 99, 0.7));
-		// style=" --loc-bg: url({locbg})"
+		background-color: rgba(255, 255, 255);
 		padding: 0;
 		margin: 0;
 		position: relative;
@@ -777,19 +772,6 @@
 				-webkit-overflow-scrolling: touch;
 				scrolling: touch;
 				padding-bottom: 10px;
-				// &::-webkit-scrollbar {
-				// 	width: 10px;
-				// }
-				// &::-webkit-scrollbar:horizontal {
-				// 	height: 10px;
-				// }
-				// &::-webkit-scrollbar-track {
-				// 	background-color: #ccc;
-				// }
-				// &::-webkit-scrollbar-thumb {
-				// 	background: #263a63;
-				// }
-				// grid-template-columns: repeat(1, 1fr); //for-horizontal scroll
 			}
 			.masonry-items {
 				color: white;

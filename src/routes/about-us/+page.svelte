@@ -5,7 +5,7 @@
     import Seo from "$lib/components/Seo.svelte";
 	import PageBanner from '$lib/components/layout/PageBanner.svelte';
     import Contactform from '$lib/components/layout/Contactform.svelte';
-    import ClientTestimonial from '$lib/components/layout/ClientTestimonial4.svelte';
+    import ClientTestimonial from '$lib/components/layout/ClientTestimonial.svelte';
     import locbg from "$lib/img/blueBackground.webp";
     import {page} from '$app/stores';
     export let data;
@@ -57,7 +57,7 @@
 
 <section class="mw-1000 text-center about-heading" id="about-heading">
         <Container>
-                <h2 class="pb-2 text-animate secondary-font text-div" in:textAnimate id="about_heading" gsap-duration="1.5">{@html about.AboutHeading ? about.AboutHeading : ''}</h2>
+                <h2 class="pb-2 text-animate primary-font text-div" in:textAnimate id="about_heading" gsap-duration="1.5">{@html about.AboutHeading ? about.AboutHeading : ''}</h2>
                 <div in:fly id="about_heading_cont" class="text-div" gsap-duration="2"  gsap-y="80">{@html about.AboutText ? about.AboutText : ''}</div>
         </Container>
 </section>
@@ -66,7 +66,7 @@
             <Row class="flex-md-row flex-column-reverse">
                 <Col md="5">
                     <div class="text-div">
-                        <h3 class="mb-4 mr-t text-animate secondary-font" in:textAnimate id="cd-heading1" gsap-duration="1" >{@html about.Section1heading ? about.Section1heading : ''}</h3>
+                        <h3 class="mb-4 mr-t text-animate primary-font" in:textAnimate id="cd-heading1" gsap-duration="1" >{@html about.Section1heading ? about.Section1heading : ''}</h3>
                         <div in:fadeIn id="cd-cont1" class="text-justify" gsap-duration="1" gsap-delay="0.5" >{@html about.Section1text ? about.Section1text : ''}</div>
                     </div>
                 </Col>
@@ -92,7 +92,7 @@
                 </Col>
                 <Col md="5">
                     <div class="text-div">
-                        <h3 class="mb-4 mr-t text-animate secondary-font" in:textAnimate id="cd-heading2" gsap-duration="1" >{@html about.Section2heading ? about.Section2heading : ''}</h3>
+                        <h3 class="mb-4 mr-t text-animate primary-font" in:textAnimate id="cd-heading2" gsap-duration="1" >{@html about.Section2heading ? about.Section2heading : ''}</h3>
                         <div in:fadeIn id="cd-cont2" class="text-justify" gsap-delay="0.5" gsap-duration="1" >{@html about.Section2text ? about.Section2text : ''}</div>
                     </div>
                 </Col>
@@ -104,7 +104,7 @@
             <Row class="flex-md-row flex-column-reverse">
                 <Col md="5">
                     <div class="text-div">
-                        <h3 class="mb-4 mr-t text-animate secondary-font" in:textAnimate id="cd-heading3" gsap-duration="1" >{@html about.Section3heading ? about.Section3heading : ''}</h3>
+                        <h3 class="mb-4 mr-t text-animate primary-font" in:textAnimate id="cd-heading3" gsap-duration="1" >{@html about.Section3heading ? about.Section3heading : ''}</h3>
                         <div in:fadeIn id="cd-cont3" class="text-justify" gsap-delay="0.5" gsap-duration="1" > {@html about.Section3text ? about.Section3text : ''}</div>
                     </div>
                 </Col>
@@ -135,9 +135,9 @@
 					{home.homeBuilderHeading ? home.homeBuilderHeading : ''}
 				</h2> -->
 				<div class="loc-gallery__cwrapper" id="build-trust">
-						<div class="h3">
+						<h3 class="h3 primary-font stc">
 							{@html about.certTitle ? about.certTitle : ''}
-						</div>
+                        </h3>
 					<div class="text-justify">
                         {@html about.certContent ? about.certContent : ''}
 					</div>
@@ -164,12 +164,12 @@
     
         <Container>
             <Row>
-                <Col md="12"><h2 class="text-center text-div mb-4 md:mb-5 text-animate secondary-font" in:textAnimate id="sp-heading" gsap-duration="1" >{@html about.Section6heading ? about.Section6heading : ''}</h2></Col>
+                <Col md="12"><h2 class="text-center text-div mb-4 md:mb-5 text-animate primary-font stc" in:textAnimate id="sp-heading" gsap-duration="1" >{@html about.Section6heading ? about.Section6heading : ''}</h2></Col>
             </Row>
             <Row class="flex-md-row flex-column-reverse sets-parts__row">  
                 <Col md="6" class="align-self-center blue-color-background sets-parts__content">
                     <div class="text-div">
-                        <h3 class="mb-4 text-right text-animate secondary-font" in:textAnimate id="sp-heading1" gsap-duration="1">{@html about.Section6subheading ? about.Section6subheading : ''}</h3>
+                        <h3 class="mb-4 text-right text-animate primary-font" in:textAnimate id="sp-heading1" gsap-duration="1">{@html about.Section6subheading ? about.Section6subheading : ''}</h3>
                         <div class="text-justify" in:fadeIn id="sp-cont1" gsap-delay="0.5" gsap-duration="1">{@html about.Section6text ? about.Section6text : ''}</div>
                     </div>
                 </Col>
@@ -203,7 +203,7 @@
                 </Col>
                 <Col md="6" class="align-self-center silver-color-background sets-parts__content sets-parts__mrl-30">
                     <div class="text-div">
-                        <h3 class="mb-4 rp-fontsize text-animate secondary-font" in:textAnimate id="sp-heading2" gsap-duration="1">{@html about.Section7heading ? about.Section7heading : ''}</h3>
+                        <h3 class="mb-4 rp-fontsize text-animate primary-font" in:textAnimate id="sp-heading2" gsap-duration="1">{@html about.Section7heading ? about.Section7heading : ''}</h3>
                         <div in:fadeIn id="sp-cont2" class="text-justify" gsap-delay="0.5" gsap-duration="1">{@html about.Section7text ? about.Section7text : ''}</div>
                     </div>
                 </Col>
@@ -217,7 +217,7 @@
             <Row class="flex-md-row flex-column-reverse sets-parts__row">
                 <Col md="6" class="align-self-center blue-color-background sets-parts__content">
                     <div class="text-div">
-                        <h3 class="mb-4 text-right text-animate secondary-font" in:textAnimate id="sp-heading3" gsap-duration="1">{@html about.Section8heading ? about.Section8heading : ''}</h3>
+                        <h3 class="mb-4 text-right text-animate primary-font" in:textAnimate id="sp-heading3" gsap-duration="1">{@html about.Section8heading ? about.Section8heading : ''}</h3>
                         <div class="text-justify" in:fadeIn id="sp-cont3" gsap-delay="0.5" gsap-duration="1">{@html about.Section8text ? about.Section8text : ''}</div>
                     </div>
                 </Col>
@@ -245,7 +245,7 @@
 <section class="talktous mw-1000">
     <Container>
         <div class="text-div">
-            <h2 class="text-animate secondary-font" in:textAnimate id="talktous-heading" gsap-duration="1">{about.talkTous.talkTous_title ? about.talkTous.talkTous_title : ''}</h2>
+            <h2 class="text-animate primary-font" in:textAnimate id="talktous-heading" gsap-duration="1">{about.talkTous.talkTous_title ? about.talkTous.talkTous_title : ''}</h2>
             <p in:fly id="talktous-cont" gsap-duration="1.2">{about.talkTous.talkTous_content ? about.talkTous.talkTous_content : ''}</p>
             <div class="talktous__btns" in:fly id="talktous-buttons" gsap-delay="0.5" gsap-duration="1.2">
                 <a href="{about.talkTous.talkTous_btn1Link ? about.talkTous.talkTous_btn1Link : '#'}" class="btn btn-secondary">{about.talkTous.talkTous_btn1 ? about.talkTous.talkTous_btn1 : 'Button'}</a>
@@ -271,8 +271,8 @@
 		color: $primary-color;
 	}
 	.loc-gallery{
-        background-color: rgba(38, 58, 99, 0.7); /* Fallback color */
-		background: var(--loc-bg, rgba(38, 58, 99, 0.7));
+        // background-color: rgba(38, 58, 99, 0.7); /* Fallback color */
+		// background: var(--loc-bg, rgba(38, 58, 99, 0.7));
 		padding: 0;
 		margin: 0;
         position: relative;
@@ -283,7 +283,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(38, 58, 99, 0.7); /* Adjust color and opacity */
+			background-color: $primary-color;
 			z-index: 0;
 		}
 		:global(.container){
@@ -313,7 +313,7 @@
 			max-width: 48rem;
 			margin: auto;
 			padding: 4rem 4rem 5rem 4rem;
-			box-shadow: 0px 0px 10px #444;
+			box-shadow: 0px 0px 10px #ccc;
 			border-radius: 0.5rem;
 			background: #fff;
             text-align: center;
@@ -395,7 +395,7 @@
 	}
 
     // @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
-    $darkgrey-color: #3E3636;   
+    
     :global(.banner.about) {
         background-position: top !important;
     } 
@@ -418,11 +418,6 @@
         }
         p{
             font-size: 1.25rem;
-        }
-    }
-    .mw-1000{
-        h2{
-            color:#263A63;
         }
     }
     .mx-8{
@@ -615,7 +610,6 @@
 		// 	min-height: unset;
 		// }
         h2{
-            color:$darkgrey-color;
             justify-content: center;
             @include media-min(sm){
             padding-bottom: 2rem;

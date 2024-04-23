@@ -17,9 +17,9 @@
 	<path class="st1" d="M0.9,0.1h429v385.7H0.9V0.1z"/>
 </mask>
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-412.4061" y1="58.8427" x2="444.8068" y2="246.9852" gradientTransform="matrix(1 0 0 -1 0 388)">
-	<stop  offset="0.5365" style="stop-color:#263A63;stop-opacity:0"/>
-	<stop  offset="0.651" style="stop-color:#263A63;stop-opacity:0"/>
-	<stop  offset="0.8283" style="stop-color:#263A63;stop-opacity:0.33"/>
+	<stop  offset="0.5365" style="stop-color:#705144;stop-opacity:0"/>
+	<stop  offset="0.651" style="stop-color:#705144;stop-opacity:0"/>
+	<stop  offset="0.8283" style="stop-color:#705144;stop-opacity:0.33"/>
 	<stop  offset="1" style="stop-color:#1D3058"/>
 </linearGradient>
 <path class="st2" d="M429.9,0.1h4v-4h-4V0.1z M0.9,4.1h429v-8H0.9V4.1z M425.9,0.1v385.7h8V0.1H425.9z"/>

@@ -111,7 +111,7 @@
 					<div class="contact__content">
 						<div class="contact__content__wrapper">
 							<h2
-								class="text-animate secondary-font"
+								class="text-animate primary-font"
 								in:textAnimate
 								id="global_contact_heading"
 								gsap-duration="1"
@@ -201,7 +201,7 @@
 			&__wrapper {
 				h2 {
 					margin-bottom: 1rem;
-					// flex-wrap: wrap;
+					color: $white-color;
 					width: 27rem;
 					@include media-max(laptopS) {
 						width: unset;

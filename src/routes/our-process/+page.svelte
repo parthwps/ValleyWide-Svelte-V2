@@ -35,7 +35,7 @@
 			<Col class="md-12 text-center">
 				<div class="our-process__heading">
 					<h2
-						class="text-animate secondary-font"
+						class="text-animate pfont"
 						in:textAnimate
 						id="process_title"
 						gsap-duration="1"
@@ -96,7 +96,7 @@
 	<Container>
 		<Row>
 			<Col md={{ size: '6', offset: 3 }} class="text-center">
-				<h3 in:fly id="ph_heading" gsap-duration="1.5" gsap-y="50">
+				<h3 in:fly id="ph_heading" class="sfont btc" gsap-duration="1.5" gsap-y="50">
 					{@html processData.section3heading ? processData.section3heading : ''}
 				</h3>
 			</Col>
@@ -145,7 +145,7 @@
 				{processData.section4heading ? processData.section4heading : ''}
 			</p>
 			<h4
-				class="text-animate secondary-font px-2 md:px-0"
+				class="text-animate  px-2 md:px-0"
 				in:textAnimate
 				id="phase1_title1"
 				gsap-duration="1.5"
@@ -166,7 +166,7 @@
 				{processData.section5heading ? processData.section5heading : ''}
 			</p>
 			<h4
-				class="text-animate secondary-font px-2"
+				class="text-animate  px-2"
 				in:textAnimate
 				id="phase1_title2"
 				gsap-duration="1.5"
@@ -210,7 +210,7 @@
 				{processData.section7heading ? processData.section7heading : ''}
 			</p>
 			<h4
-				class="text-animate secondary-font px-2 md:px-0"
+				class="text-animate  px-2 md:px-0"
 				in:textAnimate
 				id="phase1_title3"
 				gsap-duration="1.5"
@@ -231,7 +231,7 @@
 				{processData.section8heading ? processData.section8heading : ''}
 			</p>
 			<h4
-				class="text-animate secondary-font px-2 md:px-0"
+				class="text-animate  px-2 md:px-0"
 				in:textAnimate
 				id="phase1_title4"
 				gsap-duration="1.5"
@@ -320,7 +320,7 @@
 				{processData.section11heading ? processData.section11heading : ''}
 			</p>
 			<h4
-				class="text-animate secondary-font px-2 md:px-0"
+				class="text-animate  px-2 md:px-0"
 				in:textAnimate
 				id="phase2_title1"
 				gsap-duration="1.5"
@@ -341,7 +341,7 @@
 				{processData.section12heading ? processData.section12heading : ''}
 			</p>
 			<h4
-				class="text-animate secondary-font px-2 md:px-0"
+				class="text-animate  px-2 md:px-0"
 				in:textAnimate
 				id="phase2_title2"
 				gsap-duration="1.5"
@@ -362,7 +362,7 @@
 				{processData.section13heading ? processData.section13heading : ''}
 			</p>
 			<h4
-				class="text-animate secondary-font px-2 md:px-0"
+				class="text-animate  px-2 md:px-0"
 				in:textAnimate
 				id="phase2_title3"
 				gsap-duration="1.5"
@@ -505,7 +505,7 @@
 			}
 		}
 		&__paragraph {
-			background-color: #f2f2f2;
+			background-color: $primary-color;
 			padding: 3rem;
 			max-width: 40rem;
 			margin-top: -5rem;
@@ -526,7 +526,7 @@
 		}
 	}
 	.phase-heading {
-		background-color: #f2f2f2;
+		background-color: $primary-color;
 		padding: 3.75rem 0;
 
 		:global(h3) {
@@ -537,7 +537,7 @@
 			}
 			font-size: 2.25rem;
 			:global(span) {
-				font-family: $secondary-font;
+				font-family: $primary-font;
 				color: $secondary-color;
 			}
 		}
@@ -606,7 +606,7 @@
 		.num {
 			font-size: 20rem;
 			font-family: $secondary-font;
-			color: $darkbluegreen;
+			color: $secondary-color;
 			display: block;
 			@include media-max(ipadmini) {
 				font-size: 15rem;
@@ -616,7 +616,7 @@
 			}
 		}
 		&__heading {
-			background-color: $darkbluegreen;
+			background-color: $secondary-color;
 			padding: 1rem 0;
 			width: 100%;
 			margin-top: 1rem;
@@ -676,13 +676,15 @@
 						margin-right: calc(50% - 50vw);
 					}
 					.pre-head {
-						color: $primary-color;
+						color: $black-color;
 						font-style: normal;
 						font-size: 1.4em;
 						font-weight: 500;
 					}
 					h4 {
 						margin: 2rem 0;
+						font-family: $primary-font;
+						color: $secondary-color;
 						font-style: normal;
 						font-size: 2.5rem;
 					}
@@ -692,7 +694,7 @@
 				}
 				&:nth-child(even) {
 					padding-top: 9vw;
-					background-color: #f2f2f2;
+					background-color: $primary-color;
 					display: flex;
 					align-items: flex-end;
 					flex-direction: column;
@@ -764,7 +766,7 @@
 	.phase-banner-paragraph {
 		display: block;
 		margin-top: 0;
-		background-color: #f2f2f2;
+		background-color: $primary-color;
 		@include media-max(sm) {
 			padding: 0 1.375rem;
 			margin-left: calc(50% - 50vw);

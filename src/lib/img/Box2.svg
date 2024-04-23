@@ -8,9 +8,9 @@
 </style>
 <path class="st0" d="M0.8,0h470v416.8H0.8V0z"/>
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-39.2769" y1="1261.285" x2="531.7423" y2="1059.6494" gradientTransform="matrix(1 0 0 1 0 -748)">
-	<stop  offset="7.291670e-02" style="stop-color:#263A63;stop-opacity:0.72"/>
-	<stop  offset="0.5469" style="stop-color:#263A63"/>
-	<stop  offset="1" style="stop-color:#263A63;stop-opacity:0.6"/>
+	<stop  offset="7.291670e-02" style="stop-color:#705144;stop-opacity:0.72"/>
+	<stop  offset="0.5469" style="stop-color:#705144"/>
+	<stop  offset="1" style="stop-color:#705144;stop-opacity:0.6"/>
 </linearGradient>
 <path class="st1" d="M471,412.3H0v8h471V412.3z"/>
 </svg>

@@ -45,7 +45,7 @@
 <section class="service-b" in:slowDownSection gsap-start="top bottom" id="service-b">
 	<Container>
 		<h2
-			class="text-center md:mb-5 pb-0 md:py-3 text-animate secondary-font"
+			class="text-center md:mb-5 pb-0 md:py-3 text-animate primary-font stc"
 			in:textAnimate
 			id="about_s1_title"
 			gsap-duration="1"
@@ -187,7 +187,7 @@
 <section class="mx-10 sets-us-apart" in:slowDownSection id="sp-section1" gsap-start="top">
 	<Container>
 		<h2
-			class="text-center mb-5 pb-0 md:py-3 text-animate secondary-font"
+			class="text-center mb-5 pb-0 md:py-3 text-animate primary-font"
 			in:textAnimate
 			id="about_sua_title"
 			gsap-duration="1"
@@ -198,7 +198,7 @@
 			<Col md="6" class="sets-us-apart__content">
 				<div>
 					<h4
-						class="text-right pfont pt-2 pb-3 md:py-3 text-animate"
+						class="text-right primary-font pt-2 pb-3 md:py-3 text-animate"
 						in:textAnimate
 						id="about_sua_title1"
 						gsap-duration="1.5"
@@ -358,7 +358,7 @@
 <section class="reimagine">
 	<Container>
 		<h2
-			class="text-center md:mb-3 md:py-3 text-animate secondary-font"
+			class="text-center md:mb-3 md:py-3 text-animate primary-font stc"
 			in:textAnimate
 			id="about_reimagine_title"
 			gsap-duration="1"
@@ -389,7 +389,7 @@
 		<Row>
 			<Col md="12">
 				<h2
-					class="text-center text-animate secondary-font"
+					class="text-center text-animate primary-font btc"
 					in:textAnimate
 					id="about_explore_title"
 					gsap-duration="1"
@@ -431,7 +431,7 @@
 									alt={featuredProject.attributes.title}
 								/>
 							{/if}
-							<div class="explore__article__text">
+							<div class="blue-bar">
 								<span>{('0' + (index + 1)).slice(-2)}</span>
 								{featuredProject.attributes.title ? featuredProject.attributes.title : ''}
 								<i
@@ -539,7 +539,7 @@
 				&__service-icon {
 					img {
 						width: 6.202rem;
-						background-color: #263a63;
+						background-color: $secondary-color;
 						padding: 1.418rem 1.396rem;
 						box-shadow: 3px 3px 3px #aaa;
 						border-radius: 10px;
@@ -752,7 +752,9 @@
 		}
 	}
 	.explore {
-		background-color: #e5eef2;
+		background: radial-gradient(67.63% 67.63% at 50% 54.9%, rgba(229, 223, 221, 0.21) 0%, rgba(127, 132, 113, 0.24) 70%, #7F8471 100%), url("/src/lib/img/portfolio-background.webp");
+		background-position:center;
+		background-size: cover;
 		padding: 5rem 1rem;
 		margin-bottom: 0;
 		:global(.col-md-6) {

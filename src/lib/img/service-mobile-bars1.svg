@@ -2,9 +2,9 @@
 	<title>service-mobile-bars-svg</title>
 	<defs>
 		<linearGradient id="g1" x1="-96.2" y1="-731.3" x2="1015.6" y2="-629" gradientUnits="userSpaceOnUse">
-			<stop offset=".19" stop-color="#263a63" stop-opacity="0"/>
-			<stop offset=".867" stop-color="#263a63" stop-opacity="1"/>
-			<stop offset=".906" stop-color="#263a63" stop-opacity="0"/>
+			<stop offset=".19" stop-color="#705144" stop-opacity="0"/>
+			<stop offset=".867" stop-color="#705144" stop-opacity="1"/>
+			<stop offset=".906" stop-color="#705144" stop-opacity="0"/>
 		</linearGradient>
 	</defs>
 	<style>

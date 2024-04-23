@@ -102,7 +102,7 @@
 		<Row>
 			<Col md="12">
 				<h2
-					class="text-center text-animate secondary-font"
+					class="text-center text-animate primary-font stc"
 					in:textAnimate
 					id="contact_heading"
 					gsap-duration="1"
@@ -145,24 +145,24 @@
 			<Col md="4" class="flex-vcenter">
 				<!-- <Animate> -->
 				<div in:slide id="contact_detail" gsap-duration="1" gsap-x="-5" gsap-start="top 90%">
-					<h4 class="ptc pfont">
+					<h4 class="stc pfont">
 						{data.contact.data.attributes.office_address_title
 							? data.contact.data.attributes.office_address_title
 							: ''}
 					</h4>
-					<h4 class="stc pb-5">{@html office_address ? office_address : ''}</h4>
-					<h4 class="ptc pfont">
+					<h4 class="stc sfont pb-5">{@html office_address ? office_address : ''}</h4>
+					<h4 class="stc pfont">
 						{data.contact.data.attributes.mailing_address_title
 							? data.contact.data.attributes.mailing_address_title
 							: ''}
 					</h4>
-					<h4 class="stc pb-5">{@html mailing_address ? mailing_address : ''}</h4>
-					<h4 class="ptc pfont">
+					<h4 class="stc sfont pb-5">{@html mailing_address ? mailing_address : ''}</h4>
+					<h4 class="stc pfont">
 						{data.contact.data.attributes.phone_title
 							? data.contact.data.attributes.phone_title
 							: ''}
 					</h4>
-					<h4 class="stc pb-5">{@html phone ? phone : ''}</h4>
+					<h4 class="stc sfont pb-5">{@html phone ? phone : ''}</h4>
 				</div>
 				<!-- </Animate> -->
 			</Col>
@@ -200,7 +200,7 @@
 	<div class="contact-box container-fluid">
 		<div class="contact-form border-radius">
 			<h2
-				class="text-center pb-4 text-animate secondary-font"
+				class="text-center pb-4 text-animate primary-font stc"
 				in:textAnimate
 				id="contact_form_heading"
 				gsap-start="center bottom"
@@ -328,7 +328,7 @@
 			padding: 0.7rem 3.125rem;
 		}
 		:global(.contact-form button:hover) {
-			background-color: #263a63;
+			background-color: $secondary-color;
 			color: #fff;
 			border-color: #fff;
 		}
