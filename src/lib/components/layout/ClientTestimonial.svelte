@@ -178,7 +178,7 @@
 			line-height: 2.125rem;
 			font-feature-settings: 'pnum' on, 'lnum' on;
 			font-weight: 400;
-			color: $darkergray2;
+			color: $black-color;
 			margin-bottom: 3rem;
 		}
 
@@ -188,7 +188,7 @@
 			font-size: 2.125rem;
 			letter-spacing: 0.05em;
 			font-feature-settings: 'pnum' on, 'lnum' on;
-			color: $darkergray;
+			color: $black-color;
 			 @include media-max(xs){
                     text-align: center;
                 }

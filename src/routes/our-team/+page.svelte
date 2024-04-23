@@ -561,7 +561,7 @@
 				font-size: 1.438rem;
 				letter-spacing: 0.02em;
 				font-feature-settings: 'pnum' on, 'lnum' on;
-				color: $darkergray;
+				color: $black-color;
 				font-weight: 500;
 				margin-bottom: 2rem;
 
@@ -576,7 +576,7 @@
 				font-size: 1.25rem;
 				line-height: 2.125rem;
 				font-feature-settings: 'pnum' on, 'lnum' on;
-				color: $darkergray;
+				color: $black-color;
 				height: 13rem;
 				overflow-x: hidden;
 				overflow-y: auto;

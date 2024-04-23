@@ -486,7 +486,7 @@
                         max-width: 43.379rem;
                         font-size: 1.25rem;
                         line-height: 2.125rem;
-                        color: $darkergray;
+                        color: $black-color;
                         margin: auto;
                         @include media-max(lg){
                             font-size: 1rem;
