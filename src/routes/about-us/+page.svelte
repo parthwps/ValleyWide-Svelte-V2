@@ -99,7 +99,7 @@
             </Row>
         </Container>
 </section>
-<section class="contractor-details" in:slowDownSection id="cd-section3" gsap-start="top">
+<!-- <section class="contractor-details" in:slowDownSection id="cd-section3" gsap-start="top">
         <Container>
             <Row class="flex-md-row flex-column-reverse">
                 <Col md="5">
@@ -117,15 +117,15 @@
                 </Col>
             </Row>
         </Container>
-</section>
-<section class="remodel" in:fly id="remodel-img-section" gsap-y="20">
+</section> -->
+<!-- <section class="remodel" in:fly id="remodel-img-section" gsap-y="20">
     <div class="remodel__bgimage">
         {#if about.Section4image.data}
         <img loading="eager" class="image-scale-up" in:scaleUp id="remodel-img" gsap-duration="2" src="{about.Section4image.data.attributes.formats.large_x2.url ? url+about.Section4image.data.attributes.formats.large_x2.url : url+about.Section4image.data.attributes.url}" alt="{about.Section3heading}" width="{about.Section4image.data.attributes.width}" height="{about.Section4image.data.attributes.height}">
         {/if}
         <p class="text-center pt-3"><i><b>{about.Section4text ? about.Section4text : ''}</b></i></p>
     </div>  
-</section>
+</section> -->
 
 <section class="loc-gallery mvw-10" style=" --loc-bg: url({locbg})" in:slowDownSection id="loc-gallery" gsap-start="top bottom">
 	<Container>

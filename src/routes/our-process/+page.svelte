@@ -18,7 +18,7 @@
 
 <svelte:head>
 	<title>{processData.section1heading ? processData.section1heading : 'Our Process'}</title>
-	<meta name="description" content="ULFBUILT" />
+	<meta name="description" content="ValleyWide" />
 	<!-- <link rel="preload" href="{domain}{processData.Cover.data[0].attributes.url}" as="image"> -->
 </svelte:head>
 <PageBanner

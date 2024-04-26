@@ -946,6 +946,9 @@ h4:empty {
 	background: none !important;
 	box-shadow: none !important;
 }
+.option.number.active{
+	color: $secondary-color !important;
+}
 .mx-10 {
 	margin: 5rem auto;
 }

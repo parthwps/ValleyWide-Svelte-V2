@@ -5,6 +5,7 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import Carousel from '$lib/components/layout/Carousel.svelte';
 	import ParallaxImage from '$lib/components/parallaxImage.svelte';
+	import ArticleSection from '$lib/components/layout/ArticleSection.svelte';
 	import Cta from '$lib/components/layout/Cta.svelte';
 	import PageBanner from '$lib/components/layout/PageBanner.svelte';
 	import locbg from '$lib/img/blueBackground.webp';
@@ -446,9 +447,9 @@
 	</Container>
 </section>
 
-<!-- <section class="m-0 article-wrapper" id="article-wrapper">
+<section class="m-0 article-wrapper" id="article-wrapper">
 	<ArticleSection />
-</section> -->
+</section>
 
 <section class="m-0 cta-wrapper" id="cta-wrapper">
 	<Cta />

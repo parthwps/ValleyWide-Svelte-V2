@@ -59,8 +59,8 @@
 				},
 				body: JSON.stringify({
 					// "to": emailTo ? emailTo : 'dev@netdevs.com',
-					to: 'contact@ulfbuilt.com',
-					subject: emailSubject ? emailSubject : 'UlfBuilt Contact Form',
+					to: 'contact@ValleyWide.com',
+					subject: emailSubject ? emailSubject : 'ValleyWide Contact Form',
 					html:
 						'<h1>' + name + '</h1><p>' + email + '</p><p>' + phone + '</p><p>' + message + '</p>'
 				})

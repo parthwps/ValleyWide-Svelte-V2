@@ -115,7 +115,7 @@
 <section class="mw-1000 text-center article-section">
     <!-- <Animate> -->
         <Container>
-            <h2 class="mb-2 text-center text-animate secondary-font" in:textAnimate id="article_heading" gsap-duration="0.5">{data.page.data.attributes.section2heading ? data.page.data.attributes.section2heading : ''}</h2>
+            <h2 class="mb-2 text-center text-animate primary-font" in:textAnimate id="article_heading" gsap-duration="0.5">{data.page.data.attributes.section2heading ? data.page.data.attributes.section2heading : ''}</h2>
             <p class="text-left" in:fly id="article_content" gsap-duration="1" gsap-delay="0.5">{@html data.page.data.attributes.section2description ? data.page.data.attributes.section2description : ''}</p>
         </Container>
     <!-- </Animate> -->
@@ -165,7 +165,7 @@
                                         <div>
                                             <p class="pre-head" in:slide id="article_detail{i}" gsap-duration="1">{blog.attributes.location ? blog.attributes.location : 'Vail, Colorado'}</p>
                                             <!-- | {new Date(Date.parse(blog.attributes.publishedAt)).toLocaleString('default', { month: 'long',  day: 'numeric' })} · {blog.attributes.minutesRead ? blog.attributes.minutesRead : '2'} {blog.attributes.minutesRead > '1' || !blog.attributes.minutesRead ? 'minutes' : 'minute'} read -->
-                                            <h2 class="text-animate secondary-font" in:textAnimate id="article_title{i}" gsap-duration="1.3">{blog.attributes.title}</h2>
+                                            <h2 class="text-animate primary-font" in:textAnimate id="article_title{i}" gsap-duration="1.3">{blog.attributes.title}</h2>
                                             <p in:slide class="article_text" id="article_text{i}" gsap-duration="1" gsap-delay="1" gsap-y="20">{blog.attributes.shorttext}</p>
                                             <div in:fly class="article_btn" id="article_btn{i}" gsap-duration="1" gsap-delay="1.3" gsap-y="20" >
                                              <a class="btn btn-secondary" href="/articles/{blog.attributes.slug}">Read more</a>
@@ -196,11 +196,6 @@
                 {/if}
             {/if}
         {/key}
-    <div class="divider">
-        <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.9931 22.2157L3.45312 12.9257L12.9931 3.63574L22.5431 12.9257L12.9931 22.2157Z" stroke="#D8D7D7" stroke-width="2.5" stroke-miterlimit="10"/>
-        </svg>
-    </div>
 </Container>
 </section>
 <Cta/>
@@ -228,7 +223,7 @@
                 .category-date-content {
                     &:hover {
                         .category-date {
-                            color: $primary-color;
+                            color: $black-color;
                         }
                         .category-date-dropdown {
                             display: block;
@@ -238,7 +233,7 @@
                 .category-list-content {
                     &:hover {
                         .category-list {
-                            color: $primary-color;
+                            color: $black-color;
                         }
                         .category-list-dropdown {
                             display: block;
@@ -249,7 +244,7 @@
                     p{
                         padding: 1rem 1rem;
                         text-decoration: none;
-                        color: $darkgray;
+                        color: $newheader;
                         font-weight: 400;
                         cursor: pointer;
                         margin-bottom: 0;
@@ -257,14 +252,14 @@
                     .dropdown-content {
                         display: none;
                         position: absolute;
-                        background-color: #e9ebef;
+                        background-color: $primary-color;
                         min-width: 160px;
                         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                         z-index: 1;
                         p {
                             font-family: $primary-font;
                             font-feature-settings: 'pnum' on, 'lnum' on;
-                            color: $primary-color;
+                            color: $black-color;
                             &:hover, &.selected {
                                 background-color: $secondary-color;
                                 color: $white-color;
@@ -296,7 +291,7 @@
         overflow: hidden;
     }
     .blogsection5{
-        background-color: #e9ebef;
+        background-color: $primary-color;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

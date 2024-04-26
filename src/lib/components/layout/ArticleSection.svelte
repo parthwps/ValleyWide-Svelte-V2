@@ -48,11 +48,12 @@
 					<div class="insight__content">
 						<div class="insight__content__wrapper">
 							<!-- <div class="insight__content__wrapper__pre-heading">{insight.rightPreHeading ? insight.rightPreHeading : ''}</div> -->
-							<h2 class="text-animate secondary-font" in:textAnimate id="global_article_title">{insight.Heading ? insight.Heading : ''}</h2>
+							<h2 class="text-animate primary-font stc" in:textAnimate id="global_article_title">{insight.Heading ? insight.Heading : ''}</h2>
 							<div in:fly id="global_article_cont" gsap-delay="0.5" gsap-duration="1.2"  gsap-y="30">
 								{@html insight.paragprah ? insight.paragprah : ''}
 								<div class="insight__content__wrapper__btns">
-									<a href="{insight.leftBtnUrl ? insight.leftBtnUrl : '#'}/" class="btn btn-secondary">{insight.leftBtnTitle ? insight.leftBtnTitle : 'Button'}</a> <a href="{insight.rightBtnUrl ? insight.rightBtnUrl : '#'}/" class="btn btn-inverted">{insight.rightBtnTitle ? insight.rightBtnTitle : 'Button'}</a>
+									<a href="{insight.leftBtnUrl ? insight.leftBtnUrl : '#'}/" class="btn btn-secondary">{insight.leftBtnTitle ? insight.leftBtnTitle : 'Button'}</a>
+									<!-- <a href="{insight.rightBtnUrl ? insight.rightBtnUrl : '#'}/" class="btn btn-inverted">{insight.rightBtnTitle ? insight.rightBtnTitle : 'Button'}</a> -->
 								</div>
 							</div>
 						</div>

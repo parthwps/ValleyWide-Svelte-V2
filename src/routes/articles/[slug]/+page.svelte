@@ -33,12 +33,12 @@
 	canonicalURL = {seodata.seo[0].canonicalURL} /> -->
 </svelte:head>
 
-<div class="cover" style="background:#1E2D39;">
+<div class="cover">
 <Container>
     <div class="cover__covertitle">
-        <p class="pfont ptc mb-1 pt-3 article" in:slide id="single_article_pre" gsap-duration="1">Article</p>
+        <p class="sfont wtc mb-1 pt-3 article" in:slide id="single_article_pre" gsap-duration="1">Article</p>
         <!-- class="text-animate" in:textAnimate id="single_article_heading" gsap-duration="0.5" -->
-        <h1 class="pfont stc mb-4 text-animate" in:textAnimate id="single_article_title" gsap-duration="1.3">{title ? title : ''}</h1>
+        <h1 class="pfont wtc mb-4 text-animate" in:textAnimate id="single_article_title" gsap-duration="1.3">{title ? title : ''}</h1>
         <p class="ptc pb-5" in:fly id="single_article_detail" gsap-duration="1" gsap-delay="1" gsap-y="10">{location} · {published}</p>
         <!-- · {minutesRead} {minutesRead > '1' || !minutesRead ? 'mins' : 'min'}. read -->
     </div>
@@ -59,10 +59,11 @@
         </Container>
     <!-- </Animate> -->
 </section>
+{#if filteredItems.length > 0}
 <section class="related-articles">
     <!-- <Animate> -->
         <Container>
-            <h2 class="text-center pb-4 text-animate secondary-font" in:textAnimate id="about_related_title" gsap-duration="1.3">Related Articles</h2>
+            <h2 class="text-center pb-4 text-animate primary-font stc" in:textAnimate id="about_related_title" gsap-duration="1.3">Related Articles</h2>
             <Row>
                 {#each filteredItems as blog,i (blog.id)}
                 <Col md="4" class="pb-5">
@@ -88,12 +89,16 @@
         </Container>
     <!-- </Animate> -->
 </section>
+{/if}
 <Cta/>
 <style lang="scss">
     :global(.article-page .dropdown.show, .article-page .dropdown-menu) {
 		background-color: rgba(242, 237, 237, 0.20) !important;
 	}
 .cover{
+    background-image: linear-gradient($newheader, rgba(122, 120, 116, 0.4), $white-color), url('$lib/img/portfolio-background.webp');
+	background-size: cover;
+    background-position: center;
     padding-top: 8rem;
     margin-bottom: 18.75rem;
     height: 48.125rem;
@@ -119,7 +124,7 @@
         }
         p{
             text-align: left;
-            color: $gray;
+            color: $white-color;
             font-size: 1.125rem;
             font-weight: 500;
             font-feature-settings: 'pnum' on, 'lnum' on;
@@ -185,7 +190,9 @@
     }
 }
 .related-articles{
-    background: #e5eef3;
+    background: radial-gradient(67.63% 67.63% at 50% 54.9%, rgba(229, 223, 221, 0.21) 0%, rgba(127, 132, 113, 0.24) 70%, #7F8471 100%), url("/src/lib/img/portfolio-background.webp");
+    background-size: cover;
+    background-position:centerf;
     margin-bottom: 0;
     padding: 4.375rem 3.125rem 3.125rem 3.125rem;
     :global(.row){
