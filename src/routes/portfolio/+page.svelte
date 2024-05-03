@@ -6,7 +6,7 @@
     import Seo from "$lib/components/Seo.svelte";
     import { PUBLIC_STRAPI_API } from '$env/static/public';
     import axios from 'axios';
-    import noFeatured from "$lib/img/blog-empty.svg"
+    import noFeatured from "$lib/img/blog-empty.webp"
     import { paginate, LightPaginationNav } from 'svelte-paginate';
     import { textAnimate, fly, slide } from '$lib/GsapAnimation.js';
 

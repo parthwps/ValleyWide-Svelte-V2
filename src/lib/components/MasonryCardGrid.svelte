@@ -3,7 +3,7 @@
     // import { MasonryGrid } from "@egjs/svelte-grid";
     import { PUBLIC_STRAPI_API } from '$env/static/public';
     import { onMount } from 'svelte'
-    import noFeatured from "$lib/img/blog-empty.svg"
+    import noFeatured from "$lib/img/blog-empty.webp"
     // const gap = 5;
     // const defaultDirection = "end";
     // const align = "end";

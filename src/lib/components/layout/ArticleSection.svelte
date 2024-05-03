@@ -31,11 +31,11 @@
 {:then insight} 
 	<section class="insight" id="article">
 		<Container>
-			<Row>
+			<!-- <Row>
 				<Col>
 					<span class="insight__pre-heading">{insight.leftPreHeading ? insight.leftPreHeading : ''}</span>
 				</Col>
-			</Row>
+			</Row> -->
 			<Row>
 				<Col md="6" class="">
 					<div >

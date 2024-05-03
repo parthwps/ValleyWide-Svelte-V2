@@ -9,7 +9,7 @@ import { fly, fade } from "svelte/transition";
 import { paginate, LightPaginationNav } from 'svelte-paginate';
 import { PUBLIC_STRAPI_API } from '$env/static/public';
 import { onMount } from 'svelte'
-import noFeatured from "$lib/img/blog-empty.svg"
+import noFeatured from "$lib/img/blog-empty.webp"
 
 // const gap = 10;
 // const defaultDirection = "end";

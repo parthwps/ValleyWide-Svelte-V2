@@ -3,7 +3,7 @@
 	import PortfolioCarousel from '$lib/components/layout/PortfolioCarousel.svelte';
 	import Contactform from '$lib/components/layout/Contactform.svelte';
 	import Testimonial from '$lib/components/layout/Testimonial.svelte';
-	import noFeatured from '$lib/img/blog-empty.svg';
+	import noFeatured from '$lib/img/blog-empty.webp';
 	import { textAnimate, fly, fadeIn, slide, scaleUp } from '$lib/GsapAnimation.js';
 	export let data;
 	console.log(data.portfolio);

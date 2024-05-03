@@ -5,6 +5,8 @@
 	import PageBanner from '$lib/components/layout/PageBanner.svelte';
 	import Contactform from '$lib/components/layout/Contactform.svelte';
 	import Modal from '$lib/components/layout/Modal.svelte';
+	import blogempty from "$lib/img/blog-empty.webp"
+
 	import { textAnimate, fly, fadeIn, slide, slowDownSection } from '$lib/GsapAnimation.js';
 
 	export let data;
@@ -101,6 +103,16 @@
 								.url ||
 							domain + ourTeam.team_member_owner.data.attributes.memberPhoto.data.attributes.url}
 					/>
+					{:else}
+						<img
+						in:fadeIn
+						gsap-start="top bottom"
+						gsap-duration=".5"
+						width=500
+						height=500
+						use:lazyLoad={blogempty}
+						alt="member"
+					/>	
 					{/if}
 					<div class="tm-box wtc">
 						<h3 class="sfont" in:slide id="owner_name" gsap-duration="1.5" gsap-x="-5">
@@ -132,6 +144,16 @@
 		</Row>
 	</Container>
 </section>
+{#if ourTeam.team_member_owner.data.attributes.content}
+    <section class="paragraph1 mvw-10" in:slowDownSection id="paragraph1">
+        <Container>
+            <h4>
+                {@html ourTeam.team_member_owner.data.attributes.content}
+            </h4>
+        </Container>
+    </section>
+{/if}
+<!-- 
 <section class="paragraph1 mvw-10" in:slowDownSection  id="paragraph1">
 	<Container>
 		<h4>
@@ -139,9 +161,8 @@
 				? ourTeam.team_member_owner.data.attributes.content
 				: ''}
 		</h4>
-		<!-- <h4>{@html ourTeam.para1 ? ourTeam.para1 : ''}</h4> -->
 	</Container>
-</section>
+</section> -->
 <section class="team-members">
 	<Container>
 		<Row>
@@ -177,6 +198,16 @@
 										domain + member.attributes.memberPhoto.data.attributes.url}
 									alt="member"
 								/>
+								{:else}
+									<img
+									in:fadeIn
+									gsap-start="top bottom"
+									gsap-duration=".5"
+									width=500
+									height=500
+									use:lazyLoad={blogempty}
+									alt="member"
+								/>	
 								{/if}
 
 								<div class="tm-box wtc px-5 py-3" style="bottom: 1rem;">

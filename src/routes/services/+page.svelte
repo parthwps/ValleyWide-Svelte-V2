@@ -8,7 +8,7 @@
 	let seo = page.seo;
 	import Seo from '$lib/components/Seo.svelte';
 	let featuredProjects = data.portfolios.data;
-	import noFeatured from '$lib/img/blog-empty.svg';
+	import noFeatured from '$lib/img/blog-empty.webp';
 	let fallback = data.fallback.data.attributes.fallbackImage.data;
 	import { textAnimate, fly, fadeIn, slide, scaleUp, slowDownSection } from '$lib/GsapAnimation.js';
 
@@ -45,13 +45,14 @@
 <section class="service-b" in:slowDownSection gsap-start="top bottom" id="service-b">
 	<Container>
 		<h2
-			class="text-center md:mb-5 pb-0 md:py-3 text-animate primary-font stc"
+			class="text-center mb-5 pb-0 md:py-3 text-animate primary-font stc"
 			in:textAnimate
 			id="about_s1_title"
 			gsap-duration="1"
 		>
 			{page.section1heading ? page.section1heading : ''}
 		</h2>
+		<p class="mb-0">We specialize in:</p>
 		<Row>
 			<Col md="6" sm="6" xs="12">
 				<div class="service-b__service-box">
@@ -471,13 +472,10 @@
 		background-position: center !important;
 	}
 	.service-b {
-		// min-height: 75rem;
-		// display: flex;
-		// align-items: center;
-		// justify-content: center;
-		@include media-max(xs) {
-			// padding-top: 5rem;
-			// height: 150rem;
+		.container{
+			p{
+				padding: 0 3vw;
+			}
 		}
 		@include media-between(xs, md) {
 			padding-left: 0;
@@ -525,12 +523,12 @@
 			padding: 3vw;
 
 			@include media-max(md) {
-				padding: 3.75rem 2rem 0;
+				padding: 0 2rem;
 			}
 
 			p {
 				font-size: 2rem;
-				line-height: 2.5rem;
+				line-height: 3rem;
 			}
 			&__service-box-inner {
 				display: flex;

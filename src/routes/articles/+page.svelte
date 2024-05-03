@@ -4,7 +4,7 @@
     import Cta from '$lib/components/layout/Cta.svelte';
     export let data;
     import Seo from "$lib/components/Seo.svelte";
-    import blogempty from "$lib/img/blog-empty.svg";
+    import blogempty from "$lib/img/blog-empty.webp";
 	import PageBanner from '$lib/components/layout/PageBanner.svelte';
 	import Animate from '$lib/components/Animate.svelte';
     import { PUBLIC_STRAPI_API } from '$env/static/public';
