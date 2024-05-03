@@ -26,10 +26,6 @@
 		"src/routes/+layout.server.ts",
 		"src/routes/+layout.server.ts"
 	],
-	"/home_old": [
-		"src/routes/home_old/+page.server.ts",
-		"src/routes/+layout.server.ts"
-	],
 	"/our-process": [
 		"src/routes/our-process/+page.server.ts",
 		"src/routes/+layout.server.ts"
@@ -40,6 +36,9 @@
 	],
 	"/our-team/[slug]": [
 		"src/routes/our-team/[slug]/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/page": [
 		"src/routes/+layout.server.ts"
 	],
 	"/portfolio": [
