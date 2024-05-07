@@ -31,7 +31,6 @@
     // Function to handle loading the background image
     function handleBackgroundLoad() {
         checkImageLoaded();
-		console.log("tested");
 
         switch (backgroundSize) {
             case 'small':
@@ -138,10 +137,7 @@
 			}
 			&__paragraph{
 				color: #fff;
-				font-size: 1.25rem;	
-				@include media-max(sm) {
-					font-size: 1.2rem;
-				}							
+				font-size: 1.25rem;							
 			}
 			&__btn{
 					border: 1px solid #fff;

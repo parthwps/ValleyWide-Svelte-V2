@@ -52,10 +52,9 @@
 	}
 
 	import { onMount } from 'svelte';
-	import { loadingCursor } from '$lib/cursorChange.js';
+	// import { loadingCursor } from '$lib/cursorChange.js';
 	onMount(() => {
-		loadingCursor();
-		// stopSection();
+		// loadingCursor();
 
 		let updatedHeight = 0;
 		const screenWidth = window.innerWidth;
@@ -130,10 +129,10 @@
 		keywords={home.seo[0].keywords}
 		metarobots={home.seo[0].metarobots}
 		structuredData={home.seo[0].structuredData}
-		metaViewport={home.seo[0].metaViewport}
-		canonicalURL={home.seo[0].canonicalURL}
 	/>
 </svelte:head>
+<!-- metaViewport={home.seo[0].metaViewport}
+canonicalURL={home.seo[0].canonicalURL} -->
 
 <PageBanner
 	title={home.topBanner.heading ? home.topBanner.heading : 'Building Excellence'}
@@ -148,6 +147,7 @@
 	extraClass="homebanner"
 	bannerheight="100"
 	customtop="custom-top"
+	transparent=""
 />
 <section
 	class="loc-gallery mvw-10"
@@ -208,7 +208,7 @@
 						{home.midBanner.heading ? home.midBanner.heading : ''}
 					</h2>
 					<div in:fly id="tnr-button" gsap-delay="0.5" gsap-duration="1.2" gsap-y="50">
-						<a href={home.midBanner.btnUrl ? home.midBanner.btnUrl : '#'} class="btn btn-secondary">
+						<a href={home.midBanner.btnUrl ? home.midBanner.btnUrl : '#'} class="btn btn-secondary" aria-label="Learn more about our services">
 							{home.midBanner.btnTitle ? home.midBanner.btnTitle : 'Button'}
 						</a>
 					</div>
@@ -231,6 +231,7 @@
 					<a
 						href={home.midBanner.btnUrl ? home.midBanner.btnUrl : '#'}
 						class="btn btn-secondary text-center"
+						aria-label="ValleyWide Services"
 					>
 						{home.midBanner.btnTitle ? home.midBanner.btnTitle : 'Button'}
 					</a>
@@ -269,6 +270,7 @@
 							<a
 								href={home.reputation.btnUrl ? home.reputation.btnUrl : '#'}
 								class="btn btn-secondary"
+								aria-label="Our Portfolio"
 								>{home.reputation.btnTitle ? home.reputation.btnTitle : 'Button'}</a
 							>
 						</div>
@@ -356,6 +358,7 @@
 							<a
 								href={home.ourProcessButtonUrl ? home.ourProcessButtonUrl : '#'}
 								class="btn btn-secondary"
+								aria-label="Our Process"
 								>{home.ourProcessButtonTitle ? home.ourProcessButtonTitle : 'Button'}</a
 							>
 						</div>
@@ -418,6 +421,7 @@
 							<a
 								href={home.ourStoryButtonURL ? home.ourStoryButtonURL : '#'}
 								class="btn btn-secondary"
+								aria-label="About ValleyWide"
 								>{home.ourStoryButtonTitle ? home.ourStoryButtonTitle : 'Button'}</a
 							>
 						</div>

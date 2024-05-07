@@ -8,9 +8,9 @@
     let smoothTouchValue;
     import { isMobileDevice, isTabletDevice, isDesktopDevice } from '$lib/deviceUtils.ts';
 
-console.log('Is mobile device:', isMobileDevice());
-console.log('Is tablet device:', isTabletDevice());
-console.log('Is desktop device:', isDesktopDevice());
+// console.log('Is mobile device:', isMobileDevice());
+// console.log('Is tablet device:', isTabletDevice());
+// console.log('Is desktop device:', isDesktopDevice());
 
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
     

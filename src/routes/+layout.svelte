@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import Headroom from "svelte-headroom";
-    const onPin = () => console.log("pin");
+    const onPin = () => console.log("");
     import Footer from "./Footer.svelte";
     import Header from "./Header.svelte";
     import {page} from '$app/stores'
@@ -12,9 +12,7 @@
     import ScrollSmoother from '$lib/ScrollSmoother.svelte';
 
     import { isMobileDevice, isTabletDevice, isDesktopDevice } from '$lib/deviceUtils.ts';
-    console.log('Is mobile device:', isMobileDevice());
-    console.log('Is tablet device:', isTabletDevice());
-    console.log('Is desktop device:', isDesktopDevice());
+
     
     let isDesktop = false;
     onMount(() => {
@@ -40,11 +38,11 @@
 
     let header: gsap.TweenTarget;
     
-	import { loadingCursor } from '$lib/cursorChange.js';
-    onMount(() => {
-        gsap.from(header, { y: -100, duration: 1, opacity: 0, delay: 2.5, ease: 'power2.out' });
-        loadingCursor();
-    });
+	// import { loadingCursor } from '$lib/cursorChange.js';
+    // onMount(() => {
+    //     gsap.from(header, { y: -100, duration: 1, opacity: 0, delay: 2.5, ease: 'power2.out' });
+    //     loadingCursor();
+    // });
 
     let yaxis: any;
     export let data;
