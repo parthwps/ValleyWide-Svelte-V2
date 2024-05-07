@@ -80,6 +80,7 @@
 		});
   	});
 </script>
+<link rel="preload" href="/fonts/NotoSerifDisplay-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <svelte:window 
 	bind:innerWidth
 	on:scroll={hideDropdownOnScroll}
