@@ -70,9 +70,9 @@
 					<div class="banner__content__text">
 						<h1 class="ml3 text-animate" id="bannerTitle" in:textAnimate gsap-delay="0" gsap-duration="1.5"><span>{title ? title : ''}</span></h1>
 					</div>
-					<!-- {#if subTitle != null}
+					{#if subTitle != null}
 						<p class="banner__content__paragraph" in:fly id="banner_sub" gsap-delay="0" gsap-duration="0">{subTitle}</p>
-					{/if} -->
+					{/if}
 				</div>
 			</Col>
 		</Row>
