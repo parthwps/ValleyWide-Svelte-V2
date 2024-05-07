@@ -830,6 +830,9 @@
 		}
 		#tnr-preheading {
 			text-align: justify;
+			@include media-max(sm) {
+				text-align: center;
+			}
 		}
 		h2 {
 			text-align: center;
