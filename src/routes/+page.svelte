@@ -456,7 +456,6 @@
 </section>
 
 <style lang="scss">
-	//new slide up down
 	.options-container {
 		height: 100px;
 		overflow: hidden;
@@ -471,7 +470,6 @@
 	}
 	.option {
 		height: 50px;
-		/* background-color: red; */
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -522,8 +520,6 @@
 		-webkit-transform: rotateX(180deg);
 		transform: rotateX(180deg);
 	}
-	//new slide up down
-
 	.homebanner {
 		background-image: var(--banner);
 		background-size: cover;
@@ -564,6 +560,12 @@
 		}
 	}
 	:global(.loc-gallery p) {
+		@include media-max(sm) {
+			text-align: center;
+			margin: 0 2.375rem 1.375rem 2.375rem;
+		}
+	}
+	:global(.loc-gallery h3) {
 		@include media-max(sm) {
 			text-align: center;
 			margin: 0 2.375rem 1.375rem 2.375rem;
@@ -625,12 +627,13 @@
 				margin: 1rem;
 				padding: 3.75rem 0 2rem 0;
 			}
-			.h3 {
+			.h4 {
 				text-transform: uppercase;
 				font-size: 2.5rem;
 				font-weight: 600;
 				@include media-max(sm) {
 					font-size: 2rem;
+					margin: 10rem;
 				}
 				span {
 					color: $primary-color;

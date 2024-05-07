@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Col, Container, Row,  Accordion, AccordionItem } from "sveltestrap";
+	import { Col, Container, Row } from "sveltestrap";
 	import { onMount } from "svelte";
 	import axios from 'axios';
 	import { PUBLIC_STRAPI_API } from '$env/static/public';
@@ -31,11 +31,11 @@
 {:then insight} 
 	<section class="insight" id="article">
 		<Container>
-			<!-- <Row>
+			<Row>
 				<Col>
 					<span class="insight__pre-heading">{insight.leftPreHeading ? insight.leftPreHeading : ''}</span>
 				</Col>
-			</Row> -->
+			</Row>
 			<Row>
 				<Col md="6" class="">
 					<div >
@@ -53,7 +53,6 @@
 								{@html insight.paragprah ? insight.paragprah : ''}
 								<div class="insight__content__wrapper__btns">
 									<a href="{insight.leftBtnUrl ? insight.leftBtnUrl : '#'}/" class="btn btn-secondary">{insight.leftBtnTitle ? insight.leftBtnTitle : 'Button'}</a>
-									<!-- <a href="{insight.rightBtnUrl ? insight.rightBtnUrl : '#'}/" class="btn btn-inverted">{insight.rightBtnTitle ? insight.rightBtnTitle : 'Button'}</a> -->
 								</div>
 							</div>
 						</div>
@@ -83,11 +82,11 @@
 		// 	padding-right: 0;
 		// }
 		@include media-max(sm){
-			padding-left: 1rem;
-			padding-right: 1rem;
+			padding-left: 0;
+			padding-right: 0;
 		}
 		&__pre-heading{
-			color: $primary-color;
+			color: $black-color;
 			margin-bottom: 2rem;
 			display: block;	
 			font-weight: 500;		
@@ -96,8 +95,11 @@
 			&__wrapper{
 				padding-left: 4rem;		
 				@include media-max(ipadmini){
-					// padding: 1rem 0 0;
-					padding: 0;
+					padding: 0 1.375rem;
+					h2{
+						text-align: center;
+						text-wrap: balance;
+					}
 				}					
 				&__pre-heading{
 					color: $secondary-color;
@@ -127,6 +129,7 @@
 					line-height: 2.125rem;
 					font-size: 1.25rem;
 					margin-bottom: 2rem;
+						text-align: justify;
 				}		
 				&__btns{
 					// text-align: center;
