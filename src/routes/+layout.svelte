@@ -67,7 +67,8 @@
       NProgress.done();
     }
   }
-  onMount(() => {
+if(data.fallback.data.attributes.Google_Tag_Manager){
+    onMount(() => {
         const script = document.createElement('script');
         script.src = `https://www.googletagmanager.com/gtm.js?id=`+ data.fallback.data.attributes.Google_Tag_Manager;
         script.async = true;
@@ -77,6 +78,8 @@
         noscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=`+ data.fallback.data.attributes.Google_Tag_Manager +`" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
         document.body.appendChild(noscript);
     });
+}
+if(data.fallback.data.attributes.Google_Analytics_4){
   onMount(() => {
         const script = document.createElement('script');
         script.async = true;
@@ -88,6 +91,7 @@
       gtag('js', new Date());
       gtag('config', "'" + data.fallback.data.attributes.Google_Analytics_4 + "'");
   });
+}
     </script>
     <svelte:head>
         <link rel="preconnect" href="https://vwapi.netdevs.net/">
