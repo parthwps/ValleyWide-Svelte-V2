@@ -61,13 +61,12 @@
 </script>
 
 <section in:fadeIn id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({banner}); height: {pageBannerheight}vh;" rel="preload">
-	<!-- <div class="banner_overlay" in:fadeOut id="banner_overlay" gsap-duration="0" gsap-delay="0"></div> -->
 	<Container>
 		<Row>
 			<Col>
 				<div class="banner__content {customtop}">
 					<div class="banner__content__text">
-						<h1 class="ml3 text-animate" id="bannerTitle" in:textAnimate gsap-delay="0" gsap-duration="1.5"><span>{title ? title : ''}</span></h1>
+						<h1 class="ml3 text-animate" id="bannerTitle" in:textAnimate gsap-duration="1.5"><span>{title ? title : ''}</span></h1>
 					</div>
 					{#if subTitle != null}
 						<p class="banner__content__paragraph" id="banner_sub">{subTitle}</p>

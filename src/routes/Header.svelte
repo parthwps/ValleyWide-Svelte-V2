@@ -91,7 +91,7 @@
   <Navbar expand="md">
 	<NavbarBrand href="/">
 		<div class="logo-container">
-			<img loading="lazy" src={siteSettings.Header.Logo.data ? domain+siteSettings.Header.Logo.data.attributes.url : logo} alt="ValleyWide" class="logo" width="330" height="170" />
+			<img fetchpriority="high" loading="eager" src={siteSettings.Header.Logo.data ? domain+siteSettings.Header.Logo.data.attributes.url : logo} alt="ValleyWide" class="logo" width="330" height="170" />
 		</div>
 	</NavbarBrand>
 	{#if !isOpen}
