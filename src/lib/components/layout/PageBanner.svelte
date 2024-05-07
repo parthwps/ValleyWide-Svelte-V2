@@ -60,13 +60,13 @@
     });
 </script>
 
-<section in:fadeIn id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({banner}); height: {pageBannerheight}vh;" rel="preload">
+<section id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({banner}); height: {pageBannerheight}vh;" rel="preload">
 	<Container>
 		<Row>
 			<Col>
 				<div class="banner__content {customtop}">
 					<div class="banner__content__text">
-						<h1 class="ml3 text-animate" id="bannerTitle" in:textAnimate gsap-duration="1.5"><span>{title ? title : ''}</span></h1>
+						<h1 class="ml3 text-animate" id="bannerTitle" in:textAnimate gsap-duration="1"><span>{title ? title : ''}</span></h1>
 					</div>
 					{#if subTitle != null}
 						<p class="banner__content__paragraph" id="banner_sub">{subTitle}</p>
