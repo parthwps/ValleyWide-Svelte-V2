@@ -88,6 +88,7 @@
 		&__pre-heading{
 			color: $black-color;
 			margin-bottom: 2rem;
+			padding: 0 1.375rem;
 			display: block;	
 			font-weight: 500;		
 		}
