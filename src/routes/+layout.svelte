@@ -11,7 +11,7 @@
     import { gsap } from 'gsap';
     import ScrollSmoother from '$lib/ScrollSmoother.svelte';
 
-    import { isMobileDevice, isTabletDevice, isDesktopDevice } from '$lib/deviceUtils.ts';
+    import { isDesktopDevice } from '$lib/deviceUtils.ts';
 
     
     let isDesktop = false;

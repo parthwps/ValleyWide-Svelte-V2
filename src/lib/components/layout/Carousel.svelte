@@ -27,9 +27,7 @@ function handleNextClick() {
 }
 function onInit(event) {
   emblaApi = event.detail
-  // console.log(emblaApi.slideNodes()) // Access API
 }
-// console.log(featuredProjects)
 </script>
 
 <Row>
@@ -60,12 +58,12 @@ on:emblaInit="{onInit}">
 <div class="slider-container__carousel-cell">
 <a href="/portfolio/{project.attributes.slug ? project.attributes.slug : '#'}" data-sveltekit-reload class="zoomImg" draggable="false">
   {#if project.attributes.featuredImage.data != null}
-    <img loading="eager" draggable="false" src="{domain + project.attributes.featuredImage.data.attributes.formats.large.url || domain + project.attributes.featuredImage.data.attributes.url}" alt="{project.attributes.featuredImage.data.attributes.alternativeText ? project.attributes.featuredImage.data.attributes.alternativeText : "Image"}" srcset="{domain}{project.attributes.featuredImage.data.attributes.formats.medium.url ? project.attributes.featuredImage.data.attributes.formats.medium.url : project.attributes.featuredImage.data.attributes.url} 768w"
+    <img loading="eager" width="376" height="512" draggable="false" src="{domain + project.attributes.featuredImage.data.attributes.formats.large.url || domain + project.attributes.featuredImage.data.attributes.url}" alt="{project.attributes.featuredImage.data.attributes.alternativeText ? project.attributes.featuredImage.data.attributes.alternativeText : "Image"}" srcset="{domain}{project.attributes.featuredImage.data.attributes.formats.medium.url ? project.attributes.featuredImage.data.attributes.formats.medium.url : project.attributes.featuredImage.data.attributes.url} 768w"
   sizes="(max-width: 768px) 1024px"/>
   {:else}
   {#await promise}
   {:then fallback} 
-    <img loading="eager" src="{fallback ? domain+fallback.attributes.url : noFeatured}" alt="{project.attributes.title ? project.attributes.title : "Image"}" draggable="false" srcset="{fallback ? domain+fallback.attributes.url : noFeatured} 768w"
+    <img loading="eager" width="376" height="512" src="{fallback ? domain+fallback.attributes.url : noFeatured}" alt="{project.attributes.title ? project.attributes.title : "Image"}" draggable="false" srcset="{fallback ? domain+fallback.attributes.url : noFeatured} 768w"
     sizes="(max-width: 768px) 1024px">
   {/await}
   {/if}

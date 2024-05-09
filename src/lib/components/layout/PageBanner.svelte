@@ -2,6 +2,8 @@
     import { Container, Row, Col } from "sveltestrap";
 	import { textAnimate } from '$lib/GsapAnimation.js';
 	import { onMount, afterUpdate } from 'svelte';
+	import { isDesktopDevice } from '$lib/deviceUtils.ts';
+
     export let banner;
 	export let bannerMobile;
 	export let bannerSmall;
@@ -39,7 +41,11 @@
                 break;
             case 'medium':
                 backgroundSize = 'large';
-                backgroundImage = banner;
+				if(isDesktopDevice()){
+                	backgroundImage = banner;
+				}else{
+					backgroundImage = bannerMobile;
+				}
                 break;
         }
     }
