@@ -17,53 +17,53 @@
 	let pageBannerheight = 60;
 
 
-	let backgroundImage = bannerSmall;
-	let backgroundSize = 'small';
-    let backgroundLoaded = false;
+	// let backgroundImage = bannerSmall;
+	// let backgroundSize = 'small';
+    // let backgroundLoaded = false;
   
-     // Function to check if the background image has loaded
-	 function checkImageLoaded() {
-        const image = new Image();
-        image.src = backgroundImage;
-        image.onload = () => {
-            backgroundLoaded = true;
-        };
-    }
+    //  // Function to check if the background image has loaded
+	//  function checkImageLoaded() {
+    //     const image = new Image();
+    //     image.src = backgroundImage;
+    //     image.onload = () => {
+    //         backgroundLoaded = true;
+    //     };
+    // }
 
-    // Function to handle loading the background image
-    function handleBackgroundLoad() {
-        checkImageLoaded();
+    // // Function to handle loading the background image
+    // function handleBackgroundLoad() {
+    //     checkImageLoaded();
 
-        switch (backgroundSize) {
-            case 'small':
-                backgroundSize = 'medium';
-                backgroundImage = bannerMobile;
-                break;
-            case 'medium':
-                backgroundSize = 'large';
-				if(isDesktopDevice()){
-                	backgroundImage = banner;
-				}else{
-					backgroundImage = bannerMobile;
-				}
-                break;
-        }
-    }
+    //     switch (backgroundSize) {
+    //         case 'small':
+    //             backgroundSize = 'medium';
+    //             backgroundImage = bannerMobile;
+    //             break;
+    //         case 'medium':
+    //             backgroundSize = 'large';
+	// 			if(isDesktopDevice()){
+    //             	backgroundImage = banner;
+	// 			}else{
+	// 				backgroundImage = bannerMobile;
+	// 			}
+    //             break;
+    //     }
+    // }
 
-    // Reset backgroundLoaded when changing background image source
-    $: {
-        backgroundLoaded = false;
-    }
+    // // Reset backgroundLoaded when changing background image source
+    // $: {
+    //     backgroundLoaded = false;
+    // }
 
-    // Call handleBackgroundLoad initially
-    onMount(() => {
-        handleBackgroundLoad();
-    });
+    // // Call handleBackgroundLoad initially
+    // onMount(() => {
+    //     handleBackgroundLoad();
+    // });
 
-    // Call handleBackgroundLoad after each update
-    afterUpdate(() => {
-        handleBackgroundLoad();
-    });
+    // // Call handleBackgroundLoad after each update
+    // afterUpdate(() => {
+    //     handleBackgroundLoad();
+    // });
 </script>
 
 <section in:fadeIn id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({banner}); height: {pageBannerheight}vh;" rel="preload">
