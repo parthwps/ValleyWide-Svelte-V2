@@ -10,13 +10,15 @@
 // Add 'gsap-x' on the element to add starting position of slide in
 // Add 'gsap-start' on the element to specify trigger point of scroll trigger
 
-import {gsap}  from "gsap/dist/gsap";        
+import {gsap} from "gsap/dist/gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";   
 import {SplitText} from "gsap/dist/SplitText";
 import {Observer} from "gsap/dist/Observer";     
 
-gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
-
+// Register GSAP plugins after the DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
+});
 // Default Values
 
 const delayDefault = '0';
