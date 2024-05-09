@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Container, Row, Col } from "sveltestrap";
-	import { textAnimate, fly, fadeIn } from '$lib/GsapAnimation.js';
+	import { textAnimate } from '$lib/GsapAnimation.js';
 	import { onMount, afterUpdate } from 'svelte';
     export let banner;
 	export let bannerMobile;
