@@ -124,7 +124,7 @@
     <div class="copyright">
         <Container>
             <a href="https://homebuilder.app" target="_blank">
-                <img loading="lazy" src="{credit}" class="mySVG" alt="HomeBuilder.app">
+                <img loading="lazy" src="{credit}" width="200" height="30" class="mySVG" alt="HomeBuilder.app">
             </a>
         </Container>
     </div>
