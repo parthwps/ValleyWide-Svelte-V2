@@ -66,7 +66,7 @@
     });
 </script>
 
-<section in:fadeIn id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({backgroundImage}); height: {pageBannerheight}vh;" rel="preload">
+<section in:fadeIn id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({banner}); height: {pageBannerheight}vh;" rel="preload">
 	<Container>
 		<Row>
 			<Col>
