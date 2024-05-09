@@ -475,6 +475,8 @@
 		.container{
 			p{
 				padding: 0 3vw;
+				font-size: 1.5rem;
+    			padding-top: 2rem;
 			}
 		}
 		@include media-between(xs, md) {
@@ -529,6 +531,10 @@
 			p {
 				font-size: 1.5rem;
 			    line-height: 2.5rem;
+				@include media-max(md) {
+					font-size: 2rem;
+			    	line-height: 2.5rem;
+				}
 			}
 			&__service-box-inner {
 				display: flex;

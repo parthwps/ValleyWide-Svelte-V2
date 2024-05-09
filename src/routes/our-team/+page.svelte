@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Col, Container, Row } from 'sveltestrap';
 	import { lazyLoad } from '$lib/components/lazyload.js';
-
 	import PageBanner from '$lib/components/layout/PageBanner.svelte';
 	import Contactform from '$lib/components/layout/Contactform.svelte';
 	import Modal from '$lib/components/layout/Modal.svelte';
@@ -34,11 +33,11 @@
 		event.stopPropagation();
 	}
 
-	import { onMount } from 'svelte';
-	import { loadingCursor } from '$lib/cursorChange.js';
-	onMount(() => {
-		loadingCursor();
-	});
+	// import { onMount } from 'svelte';
+	// import { loadingCursor } from '$lib/cursorChange.js';
+	// onMount(() => {
+	// 	loadingCursor();
+	// });
 </script>
 
 <svelte:head>

@@ -12,8 +12,9 @@
 
 import {gsap}  from "gsap/dist/gsap";        
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";   
-import {SplitText} from "gsap/dist/SplitText";
-import {Observer} from "gsap/dist/Observer";     
+import {SplitText} from "gsap/dist/SplitText";   
+import {Observer} from "gsap/dist/Observer";   
+// import {ScrollSmoother} from "gsap/dist/ScrollSmoother";   
 
 gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
 
@@ -96,16 +97,21 @@ export function fadeIn(node) {
 }
 
 // fadeOut
+
 export function fadeOut(node) {
-    const targetElement = node;
+
+    const targetElement = node; // target element
     const targetElementID = targetElement.id;
     const delay = targetElement.getAttribute("gsap-delay") ? targetElement.getAttribute("gsap-delay") : delayDefault;
     const duration = targetElement.getAttribute("gsap-duration") ? targetElement.getAttribute("gsap-duration") : durationDefault;
     const start = targetElement.getAttribute("gsap-start") ? targetElement.getAttribute("gsap-start") : startDefault;
+    
+    // fadeOut animation
     ScrollTrigger.create({
         trigger: '#' + targetElementID,
         start: start,
         once: true,
+        // markers: true,
         onEnter: function() { 
             const tl = gsap.timeline();
             tl.set(
@@ -125,9 +131,11 @@ export function fadeOut(node) {
             );
         }
     });
+
 }
 
 // Fly
+
 export function fly(node) {
 
     const targetElement = node; // target element
@@ -384,7 +392,10 @@ export function textAnimate(node) {
 }
 
 // Written by parth
+// for minus scroll animation where section is going upwards
+
 // Image scaleUp
+
 export function scaleUp(node) {
 
     const targetElement = node; // target element
@@ -529,11 +540,15 @@ export function slowDownSection(node) {
                         duration: 0,
                     });
                 },
+                // markers: true,
             },
         });
     });
     
 }
+
+// Fly 2 new fly animation to move the element same with scrolling - usually for image
+
 
 export function fly2(node) {
 
@@ -591,11 +606,35 @@ export function fly2(node) {
 // BG Zoom
 
 export function bgZoom(node) {
+
     const targetElement = node; // target element
     const targetElementID = targetElement.id;
     const bg = targetElement.querySelector('.bg');
     const start = targetElement.getAttribute("gsap-start") ? targetElement.getAttribute("gsap-start") : 'center center';
     const scale = targetElement.getAttribute("gsap-scale") ? targetElement.getAttribute("gsap-scale") : 1.3;
+
+    // const masterTL = gsap.timeline({
+    //     ease: "none",
+    //     scrollTrigger: {
+    //         trigger: '#' + targetElementID,
+    //         start: start,
+    //         //end: '50%',
+    //         end: "+=" + (window.innerHeight * 3),
+    //         pin: true,
+    //         scrub: 4,
+    //         // markers: true,
+    //         // once: true,
+    //     }
+    // })
+
+    // const zoomBGAnimate = () => {
+    //     return gsap.to(bg, {
+    //         scale: scale,
+    //     });
+    // }
+
+    // masterTL.add(zoomBGAnimate())
+
     gsap.to(bg, {
         scale: scale, 
         ease: "none", 
@@ -604,7 +643,110 @@ export function bgZoom(node) {
             scrub: 2,
             start: "top bottom",
             end: "bottom top",
+            // end: "+=" + (window.innerHeight * 1),
+            // pin: true,
+            // markers: true,
         }
     });
 
+}
+
+// Snap for testing
+//  ScrollTrigger.create({
+//     snap: {
+//         snapTo: 1,
+//         delay: 0,
+//     },
+// });
+// End snap for testing
+
+// Auto scroll
+
+export function stopSection() {
+    
+    let sections = gsap.utils.toArray("section");
+        
+    sections.forEach((section, i) => {
+
+        // Calculate the index of the next section
+        const nextSectionIndex = i + 1;
+        // const prevSectionIndex = i - 1;
+
+        // if (nextSectionIndex < sections.length) {  // Check if there is a next section
+
+            const nextSection = sections[nextSectionIndex];
+            // const prevSection = sections[prevSectionIndex];
+
+            const offsetHeight = nextSection ? nextSection.getBoundingClientRect() : '';
+
+            // Scroll down
+            function down() {
+                gsap.to(window, {
+                    duration: 2, 
+                    scrollTo: {
+                        // y: "#" + nextSection.id, 
+                        y: offsetHeight.top,
+                        // offsetY: 80,
+                        autoKill: true
+                    }
+                });
+            }
+
+            if(!section.classList.contains("autoscroll-exception")) { // if section is not exluded on the adding of scroll trigger auto scroll
+                
+                mm.add("(max-width: 768px)", () => {
+
+                    // observer that will be triggered by the onEnter
+                    // Touch
+                    let scrollObserverTouch = Observer.create({
+                        target: window,    
+                        type: "touch",
+                        onUp: () => down(), 
+                    });
+                    scrollObserverTouch.disable();
+
+                    // Scroll
+                    let scrollObserverScroll = Observer.create({
+                        target: window,    
+                        type: "wheel",
+                        onDown: () => down(),
+                    });
+                    scrollObserverScroll.disable();
+
+                    // Scroll trigger for stop and observer
+                    // section.style.opacity = 0;
+                    ScrollTrigger.create({
+                        trigger: section,
+                        start: "bottom 90%", // start of stop then enable the observer
+                        end: "bottom center",
+                        // markers: true,
+                        // pin: true,
+                        onEnter: self => {
+                            self.scroll(self.start + 1);
+                            scrollObserverTouch.enable();
+                            scrollObserverScroll.enable();
+
+                            // gsap.to(section, {
+                            //     opacity: 1,
+                            //     duration: 2,
+                            // });
+                        },
+                        // onLeaveBack: self => {
+                        //     self.scroll(self.end - 1);
+                        //     scrollObserverTouch.enable();
+                        //     scrollObserverScroll.enable();
+                        // },
+                        onLeave: () => {
+                            scrollObserverTouch.disable();
+                            scrollObserverScroll.disable();
+                        }
+                    });
+
+                });
+
+            } 
+
+        // }
+        
+    });
 }
