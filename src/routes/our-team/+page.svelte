@@ -12,7 +12,7 @@
 	export let data;
 	let domain = 'https://vwapi.netdevs.net';
 	let ourTeam = data.data.attributes;
-	console.log(ourTeam);
+	
 	let showModal = false;
 	let memberName = '';
 	let memberImage = '';
