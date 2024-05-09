@@ -52,7 +52,7 @@
 		>
 			{page.section1heading ? page.section1heading : ''}
 		</h2>
-		<p class="mb-0 text-center">We specialize in:</p>
+		<p class="mb-2 text-center">We specialize in:</p>
 		<Row>
 			<Col md="6" sm="6" xs="12">
 				<div class="service-b__service-box mb-5">

@@ -155,6 +155,9 @@
             font-size: 1rem;
             display: flex;
             justify-content: space-between;
+            @include media-max(sm){
+                justify-content: center;
+            }
         }
         :global(.footer__post-footer__paragraph p p span) {
             color: #aca7a7;
@@ -178,30 +181,17 @@
             }
     
         :global(.footer__post-footer__paragraph p span a:hover::after, .footer__post-footer__paragraph p span a:focus::after){
-      opacity: 1;
-      transform: translate3d(0, 0.2em, 0);
+            opacity: 1;
+            transform: translate3d(0, 0.2em, 0);
         }
-        // :global(.footer__post-footer__paragraph p span a::before) {
-        //         content: '';
-        //         position: absolute;
-        //         bottom: 0;
-        //         left: 50%;
-        //         width: 6px;
-        //         height: 6px;
-        //         background-color: #fff;
-        //         border-radius: 50%;
-        //         transform: translateX(-50%) scale(0);
-        //         transition: transform 0.3s ease-in-out;
-        // }
-        // :global(.footer__post-footer__paragraph p span a:hover::before) {
-        //         transform: translateX(-50%) scale(1);
-        // }
-        // :global(.footer__post-footer__paragraph p span a:hover) {
-        //         color: #ff4500;
-        //     }
         :global(.footer__col:nth-child(4) .footer__widget--item a){
         display: block;
         padding: 0.25rem 0;
+        }
+        :global(.footer__widget--item div){
+            @include media-max(sm){
+            text-align: center;
+            }
         }
         :global(.footer__post-footer__paragraph p span a){
             text-decoration: none;
@@ -213,9 +203,16 @@
         .copyright{
             background-color: #333333;
             padding: 1.2rem 0;
+                @include media-max(sm){
+                    text-align: center;
+                }
             img{
                 height: 30px;
                 width: auto;
+                opacity: .3;
+                &:hover{
+                    opacity: .8;
+                }
             }
         }
         .mySVG:hover{

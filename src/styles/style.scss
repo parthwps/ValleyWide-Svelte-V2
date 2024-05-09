@@ -743,6 +743,9 @@ header {
     // }	
     a{
         color: #fff;
+		@include media-max(sm){
+			text-align: center;
+		}
     }
     h4{
         font-size: 1rem;
@@ -1057,6 +1060,9 @@ h4:empty {
     &__post-footer{
         &__social{
             margin: 2rem 0 1rem;
+			@include media-max(sm){
+				text-align: center;
+			}
             &__icon{
                 margin-right: 1rem;
             }

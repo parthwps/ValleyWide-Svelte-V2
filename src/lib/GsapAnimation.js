@@ -17,9 +17,9 @@ import {Observer} from "gsap/dist/Observer";
 
 // Register GSAP plugins after the DOMContentLoaded event
 if (typeof window !== 'undefined') {
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
-});
+// });
 }
 // Default Values
 
