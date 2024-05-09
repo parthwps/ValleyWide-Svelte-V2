@@ -15,7 +15,7 @@
 	let pageBannerheight = 60;
 
 
-	let backgroundImage = banner;
+	let backgroundImage = bannerSmall;
 	let backgroundSize = 'small';
     let backgroundLoaded = false;
   
@@ -35,11 +35,11 @@
         switch (backgroundSize) {
             case 'small':
                 backgroundSize = 'medium';
-                backgroundImage = 'https://vwapi.netdevs.net/uploads/medium_Heritage_Park_aerials_67421907fe.webp';
+                backgroundImage = bannerMobile;
                 break;
             case 'medium':
                 backgroundSize = 'large';
-                backgroundImage = 'https://vwapi.netdevs.net/uploads/large_x2_Heritage_Park_aerials_67421907fe.webp';
+                backgroundImage = banner;
                 break;
         }
     }
@@ -60,7 +60,7 @@
     });
 </script>
 
-<section id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({banner}); height: {pageBannerheight}vh;" rel="preload">
+<section id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({backgroundImage}); height: {pageBannerheight}vh;" rel="preload">
 	<Container>
 		<Row>
 			<Col>
