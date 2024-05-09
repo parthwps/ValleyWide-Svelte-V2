@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Container, Row, Col } from "sveltestrap";
-	import { textAnimate } from '$lib/GsapAnimation.js';
+	import { fadeIn, textAnimate } from '$lib/GsapAnimation.js';
 	import { onMount, afterUpdate } from 'svelte';
 	import { isDesktopDevice } from '$lib/deviceUtils.ts';
 
@@ -66,7 +66,7 @@
     });
 </script>
 
-<section id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({backgroundImage}); height: {pageBannerheight}vh;" rel="preload">
+<section in:fadeIn id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({backgroundImage}); height: {pageBannerheight}vh;" rel="preload">
 	<Container>
 		<Row>
 			<Col>
