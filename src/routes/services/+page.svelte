@@ -52,10 +52,10 @@
 		>
 			{page.section1heading ? page.section1heading : ''}
 		</h2>
-		<p class="mb-0">We specialize in:</p>
+		<p class="mb-0 text-center">We specialize in:</p>
 		<Row>
 			<Col md="6" sm="6" xs="12">
-				<div class="service-b__service-box">
+				<div class="service-b__service-box mb-5">
 					<div class="service-b__service-box__service-box-inner">
 						<div class="service-b__service-box__service-box-inner__service-icon">
 							<img
@@ -80,7 +80,7 @@
 				</div>
 			</Col>
 			<Col md="6" sm="6" xs="12">
-				<div class="service-b__service-box">
+				<div class="service-b__service-box mb-5">
 					<div class="service-b__service-box__service-box-inner">
 						<div class="service-b__service-box__service-box-inner__service-icon">
 							<img
@@ -527,8 +527,8 @@
 			}
 
 			p {
-				font-size: 2rem;
-				line-height: 3rem;
+				font-size: 1.5rem;
+			    line-height: 2.5rem;
 			}
 			&__service-box-inner {
 				display: flex;

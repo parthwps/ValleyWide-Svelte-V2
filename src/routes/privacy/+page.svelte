@@ -29,7 +29,7 @@
 </svelte:head>
 <PageBanner title="{data.data.attributes.title ? data.data.attributes.title : 'Privacy Policy'}" extraClass="privacy" subTitle="{data.data.attributes.Subheading ? data.data.attributes.Subheading : ''}"  banner="{url}{data.data.attributes.Cover.data.attributes.url}"/>
 
-<section class="content" >
+<section class="content">
     <Container class="mw-1000 h-text">
         <h2 class="text-center mb-5 text-animate secondary-font" in:textAnimate id="privacy_heading" gsap-duration="1.5" gsap-start="top 90%">{data.data.attributes.Heading ? data.data.attributes.Heading : ''}</h2>
         <div in:fadeIn id="privacy_content" gsap-duration="1" gsap-start="top 90%">{@html data.data.attributes.Content ? data.data.attributes.Content : ''}</div>
@@ -38,12 +38,14 @@
 <Cta/>
 <style lang="scss">
 .content{
+    padding: 0 1.375rem;
     h2 {
         color: $black-color;
         justify-content: center;
     }
     :global(p){
-        line-height: 1.7rem !important;        
+        line-height: 1.7rem !important; 
+        text-align: justify;       
     }
     :global(h3){
         padding-bottom: 0.971rem;
