@@ -209,7 +209,7 @@
             img{
                 height: 30px;
                 width: auto;
-                opacity: .3;
+                opacity: .1;
                 &:hover{
                     opacity: .8;
                 }

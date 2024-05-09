@@ -10,17 +10,13 @@
 // Add 'gsap-x' on the element to add starting position of slide in
 // Add 'gsap-start' on the element to specify trigger point of scroll trigger
 
-import {gsap} from "gsap/dist/gsap";
+import {gsap}  from "gsap/dist/gsap";        
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";   
 import {SplitText} from "gsap/dist/SplitText";
 import {Observer} from "gsap/dist/Observer";     
 
-// Register GSAP plugins after the DOMContentLoaded event
-// if (typeof window !== 'undefined') {
-// document.addEventListener('DOMContentLoaded', () => {
-    gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
-// });
-// }
+gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
+
 // Default Values
 
 const delayDefault = '0';
@@ -100,36 +96,36 @@ export function fadeIn(node) {
 }
 
 // fadeOut
-// export function fadeOut(node) {
-//     const targetElement = node;
-//     const targetElementID = targetElement.id;
-//     const delay = targetElement.getAttribute("gsap-delay") ? targetElement.getAttribute("gsap-delay") : delayDefault;
-//     const duration = targetElement.getAttribute("gsap-duration") ? targetElement.getAttribute("gsap-duration") : durationDefault;
-//     const start = targetElement.getAttribute("gsap-start") ? targetElement.getAttribute("gsap-start") : startDefault;
-//     ScrollTrigger.create({
-//         trigger: '#' + targetElementID,
-//         start: start,
-//         once: true,
-//         onEnter: function() { 
-//             const tl = gsap.timeline();
-//             tl.set(
-//                 '#' + targetElementID,
-//                 {
-//                     opacity: 1,
-//                 }
-//             );
+export function fadeOut(node) {
+    const targetElement = node;
+    const targetElementID = targetElement.id;
+    const delay = targetElement.getAttribute("gsap-delay") ? targetElement.getAttribute("gsap-delay") : delayDefault;
+    const duration = targetElement.getAttribute("gsap-duration") ? targetElement.getAttribute("gsap-duration") : durationDefault;
+    const start = targetElement.getAttribute("gsap-start") ? targetElement.getAttribute("gsap-start") : startDefault;
+    ScrollTrigger.create({
+        trigger: '#' + targetElementID,
+        start: start,
+        once: true,
+        onEnter: function() { 
+            const tl = gsap.timeline();
+            tl.set(
+                '#' + targetElementID,
+                {
+                    opacity: 1,
+                }
+            );
 
-//             tl.to(
-//                 '#' + targetElementID,
-//                 {
-//                     duration: duration,
-//                     opacity: 0,
-//                     delay: delay,
-//                 }
-//             );
-//         }
-//     });
-// }
+            tl.to(
+                '#' + targetElementID,
+                {
+                    duration: duration,
+                    opacity: 0,
+                    delay: delay,
+                }
+            );
+        }
+    });
+}
 
 // Fly
 export function fly(node) {
