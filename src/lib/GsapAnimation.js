@@ -16,9 +16,11 @@ import {SplitText} from "gsap/dist/SplitText";
 import {Observer} from "gsap/dist/Observer";     
 
 // Register GSAP plugins after the DOMContentLoaded event
+if (typeof window !== 'undefined') {
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
 });
+}
 // Default Values
 
 const delayDefault = '0';
