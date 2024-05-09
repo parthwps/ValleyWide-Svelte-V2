@@ -4,65 +4,63 @@
 	import axios from 'axios';
 	import { PUBLIC_STRAPI_API } from '$env/static/public';
 	import { textAnimate, fly, slide } from '$lib/GsapAnimation.js';
-
-	const domain = "https://vwapi.netdevs.net"
-	
-	let promise = fetchCta();
-	async function fetchCta(){
-		const url = 'https://vwapi.netdevs.net/api/global-article-cta?populate=deep,2';
-		const headers = {
-			Authorization: 'Bearer ' + PUBLIC_STRAPI_API
-		};
-
-		try {
-			const response = await axios.get(url, { headers });
-			return response.data.data.attributes;
-		} catch (error) {
-			console.error('Error fetching data:', error);
-		}
+  
+	const domain = "https://vwapi.netdevs.net";
+	let insight = null;
+  
+	async function fetchCta() {
+	  const url = `${domain}/api/global-article-cta?populate=deep,2`;
+	  const headers = {
+		Authorization: `Bearer ${PUBLIC_STRAPI_API}`
+	  };
+  
+	  try {
+		const response = await axios.get(url, { headers });
+		return response.data.data.attributes;
+	  } catch (error) {
+		console.error('Error fetching CTA data:', error);
+		return null;
+	  }
 	}
-
-	onMount(() => {
-		promise = fetchCta();
-	});	
-
-</script>
-{#await promise}
-{:then insight} 
+  
+	onMount(async () => {
+	  insight = await fetchCta();
+	});
+  </script>
+  
+  {#if insight}
 	<section class="insight" id="article">
-		<Container>
-			<Row>
-				<Col>
-					<span class="insight__pre-heading">{insight.leftPreHeading ? insight.leftPreHeading : ''}</span>
-				</Col>
-			</Row>
-			<Row>
-				<Col md="6" class="">
-					<div >
-						{#if insight.image.data}
-						<img loading="lazy" in:slide id="global_article_img" gsap-x="-30" gsap-duration="1.2" src="{domain}{insight.image.data.attributes.formats.large.url ? insight.image.data.attributes.formats.large.url : insight.image.data.attributes.url}" alt="Stair">
-						{/if}
-					</div>
-				</Col>
-				<Col md="6" class="my-auto">
-					<div class="insight__content">
-						<div class="insight__content__wrapper">
-							<!-- <div class="insight__content__wrapper__pre-heading">{insight.rightPreHeading ? insight.rightPreHeading : ''}</div> -->
-							<h2 class="text-animate primary-font stc" in:textAnimate id="global_article_title">{insight.Heading ? insight.Heading : ''}</h2>
-							<div in:fly id="global_article_cont" gsap-delay="0.5" gsap-duration="1.2"  gsap-y="30">
-								{@html insight.paragprah ? insight.paragprah : ''}
-								<div class="insight__content__wrapper__btns">
-									<a href="{insight.leftBtnUrl ? insight.leftBtnUrl : '#'}/" class="btn btn-secondary">{insight.leftBtnTitle ? insight.leftBtnTitle : 'Button'}</a>
-								</div>
-							</div>
-						</div>
-					</div>				
-				</Col>
-			</Row>
-		</Container>
+	  <Container>
+		<Row>
+		  <Col>
+			<span class="insight__pre-heading">{insight.leftPreHeading || ''}</span>
+		  </Col>
+		</Row>
+		<Row>
+		  <Col md="6" class="">
+			<div>
+			  {#if insight.image.data}
+				<img loading="lazy" in:slide id="global_article_img" gsap-x="-30" gsap-duration="1.2" src="{domain}{insight.image.data.attributes.formats.large.url || insight.image.data.attributes.url}" alt="Stair">
+			  {/if}
+			</div>
+		  </Col>
+		  <Col md="6" class="my-auto">
+			<div class="insight__content">
+			  <div class="insight__content__wrapper">
+				<h2 class="text-animate primary-font stc" in:textAnimate id="global_article_title">{insight.Heading || ''}</h2>
+				<div in:fly id="global_article_cont" gsap-delay="0.5" gsap-duration="1.2"  gsap-y="30">
+				  {@html insight.paragprah || ''}
+				  <div class="insight__content__wrapper__btns">
+					<a href="{insight.leftBtnUrl || '#'}" class="btn btn-secondary">{insight.leftBtnTitle || 'Button'}</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </Col>
+		</Row>
+	  </Container>
 	</section>
-{/await}
-
+  {/if}
 
 <style lang="scss">
 	.insight{

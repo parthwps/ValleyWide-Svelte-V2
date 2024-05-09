@@ -19,9 +19,6 @@
 	  DropdownToggle,
 	  DropdownMenu,
 	  DropdownItem,
-
-	  Container
-
 	} from 'sveltestrap';
 	export let menu;
 	import axios from 'axios';

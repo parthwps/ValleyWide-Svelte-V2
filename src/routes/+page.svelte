@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let data;
+  
 	import { lazyLoad } from '$lib/components/lazyload.js';
 	import { Col, Container, Row } from 'sveltestrap';
 	import Seo from '$lib/components/Seo.svelte';
@@ -11,113 +12,77 @@
 	import axios from 'axios';
 	import { PUBLIC_STRAPI_API } from '$env/static/public';
 	import { textAnimate, fly, slide, fly2, slowDownSection } from '$lib/GsapAnimation.js';
-
+  
 	let y = 0;
 	const domain = 'https://vwapi.netdevs.net';
 	const home = data.home.data.attributes;
 	let fallback = data.fallback.data.attributes.fallbackImage.data;
 	let propCount = 3;
-
+  
 	// Function for portfolio masonry
 	let portfolioList = [];
 	let loading;
-
+  
 	let activeTab = home.categories.data[0].id;
 	function handleTabClick(category) {
-		activeTab = category;
+	  activeTab = category;
+	  fetchPortfolioData();
 	}
-
-	$: if (activeTab) {
-		// Check if has new variable data
-		loading = true;
-		(async () => {
-			const url =
-				'https://vwapi.netdevs.net/api/portfolios?filters[categories][id][$eq]=' +
-				activeTab +
-				'&populate=deep,2';
-			const headers = {
-				Authorization: 'Bearer ' + PUBLIC_STRAPI_API
-			};
-			try {
-				const response = await axios.get(url, { headers });
-				portfolioList = response.data.data;
-				loading = false;
-				// new Promise((resolve) => {
-				//     setTimeout(() => resolve(portfolioList = response.data.data), 500)
-				// })
-			} catch (error) {
-				console.error('Error fetching data:', error);
-			}
-		})();
+  
+	async function fetchPortfolioData() {
+	  loading = true;
+	  try {
+		const response = await axios.get(`${domain}/api/portfolios`, {
+		  params: {
+			'filters[categories][id][$eq]': activeTab,
+			populate: 'deep,2'
+		  },
+		  headers: {
+			Authorization: `Bearer ${PUBLIC_STRAPI_API}`
+		  }
+		});
+		portfolioList = response.data.data;
+	  } catch (error) {
+		console.error('Error fetching data:', error);
+	  }
+	  loading = false;
 	}
-
-	import { onMount } from 'svelte';
-	// import { loadingCursor } from '$lib/cursorChange.js';
-	onMount(() => {
-		// loadingCursor();
-
-		let updatedHeight = 0;
-		const screenWidth = window.innerWidth;
-
-		if (screenWidth > 768) {
-			const myDiv = document.querySelector('.loc-gallery');
-			const initialHeight = myDiv ? myDiv.clientHeight : 0;
-			updatedHeight = initialHeight + 200;
-			if (myDiv) {
-				myDiv.style.height = updatedHeight + 'px';
-			}
-		}
-	});
-
-	//new slideup and down
+  
+	fetchPortfolioData(); // Fetch initial portfolio data
+  
+	// Handle top and bottom arrow clicks
 	import arrowtop from '$lib/img/arrow-top.svg';
 	let selectedIndex = 1;
+	const optionsContainer = document.querySelector('.options');
+	const options = document.querySelectorAll('.option');
 	const updateSelectedOption = () => {
-		const options = document.querySelectorAll('.option');
-		options.forEach((option, index) => {
-			if (index === selectedIndex) {
-				option.classList.add('op-selected');
-
-				if (index === 0) {
-					const container = document.querySelector('.options');
-					container.style.transform = 'translateY(25px)';
-					option.click();
-				}
-				if (index === 1) {
-					const container = document.querySelector('.options');
-					container.style.transform = 'translateY(-25px)';
-					option.click();
-				}
-				if (index === 2) {
-					const container = document.querySelector('.options');
-					container.style.transform = 'translateY(-75px)';
-					option.click();
-				}
-			} else {
-				option.classList.remove('op-selected');
-			}
-		});
+	  options.forEach((option, index) => {
+		if (index === selectedIndex) {
+		  option.classList.add('op-selected');
+		  const translateY = index === 0 ? '25px' : index === 1 ? '-25px' : '-75px';
+		  optionsContainer.style.transform = `translateY(${translateY})`;
+		  option.click();
+		} else {
+		  option.classList.remove('op-selected');
+		}
+	  });
 	};
+  
 	const handleTopArrowClick = () => {
-		if (selectedIndex > 0) {
-			selectedIndex -= 1;
-			updateSelectedOption();
-		}
+	  if (selectedIndex > 0) {
+		selectedIndex -= 1;
+		updateSelectedOption();
+	  }
 	};
+  
 	const handleBottomArrowClick = () => {
-		const options = document.querySelectorAll('.option');
-		if (selectedIndex < options.length - 1) {
-			selectedIndex += 1;
-			updateSelectedOption();
-		}
+	  if (selectedIndex < options.length - 1) {
+		selectedIndex += 1;
+		updateSelectedOption();
+	  }
 	};
-
-	let pageData = {
-		metaTitle: 'Page Title',
-		metaDescription: 'Page Description'
-	};
-</script>
-
+  </script>
+  
 <svelte:window bind:scrollY={y} />
 <svelte:head>
 	<!-- <title>{home.title ? home.title : 'Home'}</title> -->
