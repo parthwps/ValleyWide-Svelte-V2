@@ -1,8 +1,5 @@
 <script lang="ts">
-    import { Container, Row, Col } from "sveltestrap";
 	import { fadeIn, textAnimate } from '$lib/GsapAnimation.js';
-	import { onMount, afterUpdate } from 'svelte';
-	import { isDesktopDevice } from '$lib/deviceUtils.ts';
 
     export let banner;
 	export let bannerMobile;
@@ -66,21 +63,15 @@
     // });
 </script>
 
-<section in:fadeIn id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({banner}); height: {pageBannerheight}vh;" rel="preload">
-	<Container>
-		<Row>
-			<Col>
-				<div class="banner__content {customtop}">
-					<div class="banner__content__text">
-						<h1 class="ml3 text-animate" id="bannerTitle" in:textAnimate gsap-duration="1"><span>{title ? title : ''}</span></h1>
-					</div>
-					{#if subTitle != null}
-						<p class="banner__content__paragraph" id="banner_sub">{subTitle}</p>
-					{/if}
-				</div>
-			</Col>
-		</Row>
-	</Container>
+<section in:fadeIn id="banner_bg" class="banner {extraClass ? extraClass : ''} {transparent ? transparent : 'transparent'} autoscroll-exception" style="--banner: url({banner}); height: {pageBannerheight}vh;">
+	<div class="banner__content {customtop}">
+		<div class="banner__content__text">
+			<h1 class="ml3 text-animate" id="bannerTitle" in:textAnimate gsap-duration="1"><span>{title ? title : ''}</span></h1>
+		</div>
+		{#if subTitle != null}
+			<p class="banner__content__paragraph" id="banner_sub">{subTitle}</p>
+		{/if}
+	</div>
 </section>
 
 <style lang="scss">
@@ -113,7 +104,6 @@
             z-index: 10;
         }
 		.custom-top{
-			// margin-top: -8rem;
 			@include media-max(sm) {
 				margin-top: -12rem;
 			}
