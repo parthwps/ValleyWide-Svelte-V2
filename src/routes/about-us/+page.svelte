@@ -5,7 +5,7 @@
     import Seo from "$lib/components/Seo.svelte";
 	import PageBanner from '$lib/components/layout/PageBanner.svelte';
     import Contactform from '$lib/components/layout/Contactform.svelte';
-    import ClientTestimonial from '$lib/components/layout/ClientTestimonial.svelte';
+    // import ClientTestimonial from '$lib/components/layout/ClientTestimonial.svelte';
     import locbg from "$lib/img/blueBackground.webp";
     import {page} from '$app/stores';
     export let data;
@@ -236,11 +236,11 @@
     
 </section>
 
-<section id="clientSays">
-        {#if testimonialsData}
-        <ClientTestimonial clientTestimonials={testimonialsData} testimonialHeading={about.testimonialHeading}></ClientTestimonial>
-        {/if}
-</section>
+<!-- <section id="clientSays"> -->
+    <!-- {#if testimonialsData} -->
+    <!-- <ClientTestimonial clientTestimonials={testimonialsData} testimonialHeading={about.testimonialHeading}></ClientTestimonial> -->
+    <!-- {/if} -->
+<!-- </section> -->
 
 <section class="talktous mw-1000">
     <Container>
@@ -310,7 +310,7 @@
 			}
 		}		
 		&__cwrapper{
-			max-width: 48rem;
+			max-width: 60rem;
 			margin: auto;
 			padding: 4rem 4rem 5rem 4rem;
 			box-shadow: 0px 0px 10px #ccc;
@@ -402,7 +402,7 @@
     .about-heading{
         margin: 5rem auto;
         // margin-top: 20vw;
-        min-height: 70vh;
+        min-height: 40vh;
 		display: flex;
 		align-items: center;
         // @include media-max(default){

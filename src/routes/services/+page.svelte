@@ -575,8 +575,8 @@
 		padding: 0;
 	}
 	.reimagine {
-		min-height: 100vh;
-		padding: 10rem 0;
+		min-height: 60vh;
+		padding: 7rem 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;

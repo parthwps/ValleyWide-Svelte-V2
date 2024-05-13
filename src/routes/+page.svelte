@@ -414,10 +414,10 @@ canonicalURL={home.seo[0].canonicalURL} -->
 		</Row>
 	</Container>
 </section>
-
+<!-- 
 <section class="m-0 article-wrapper" id="article-wrapper">
 	<ArticleSection />
-</section>
+</section> -->
 
 <section class="m-0 cta-wrapper" id="cta-wrapper">
 	<Cta />
