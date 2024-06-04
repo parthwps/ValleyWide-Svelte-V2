@@ -171,7 +171,7 @@
 				id="member_heading"
 				gsap-duration="1.5"
 			>
-				{ourTeam.title ? ourTeam.title : ''}
+				{ourTeam.team_member_section_title ? ourTeam.team_member_section_title : ''}
 			</h2>
 			<Col md={{ size: 8, offset: 2 }} class="inner-col team-member-part">
 				<Row>
