@@ -5,7 +5,7 @@
 	import { PUBLIC_STRAPI_API } from '$env/static/public';
 	import { textAnimate, fly, slide } from '$lib/GsapAnimation.js';
   
-	const domain = "https://vwapi.netdevs.net";
+	const domain = "https://valleywidebuilders.com";
 	let insight = null;
   
 	async function fetchCta() {

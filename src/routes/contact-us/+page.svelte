@@ -7,7 +7,7 @@
 	const color = 'darkblue';
 	import { Col, Container, Row } from 'sveltestrap';
 	import { PUBLIC_STRAPI_API } from '$env/static/public';
-	const url = 'https://vwapi.netdevs.net/';
+	const url = 'https://valleywidebuilders.com/';
 
 	let phone = data.contact.data.attributes.phone;
 	let office_address = data.contact.data.attributes.office_address;
@@ -22,7 +22,7 @@
 		result = '';
 	console.log('email', emailTo);
 	async function doContact() {
-		const url = 'https://vwapi.netdevs.net/api/contact-forms';
+		const url = 'https://valleywidebuilders.com/api/contact-forms';
 		const res = await fetch(url, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json', Authorization: 'bearer ' + PUBLIC_STRAPI_API },
@@ -40,7 +40,7 @@
 			result = json.error.message;
 		} else {
 			result = 'Processing...';
-			const url2 = 'https://vwapi.netdevs.net/api/email/';
+			const url2 = 'https://valleywidebuilders.com/api/email/';
 			const res2 = await fetch(url2, {
 				method: 'POST',
 				headers: {

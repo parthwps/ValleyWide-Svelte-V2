@@ -15,7 +15,7 @@
     let aboutsubheading = data.about.data.attributes.Aboutsubheading
     let about = data.about.data.attributes
 
-    let url = "https://vwapi.netdevs.net/";
+    let url = "https://valleywidebuilders.com/";
     let scroll: number;
 
     let testimonialsData = data.testimonials.data;

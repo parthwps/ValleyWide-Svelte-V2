@@ -5,7 +5,7 @@
 	import ParallaxImage from '$lib/components/parallaxImage.svelte';
 	// import { fade, fly } from 'svelte/transition';
 	import { textAnimate, fly, fadeIn, slide, scaleUp, slowDownSection } from '$lib/GsapAnimation.js';
-	const domain = 'https://vwapi.netdevs.net';
+	const domain = 'https://valleywidebuilders.com';
 	export let data;
 	const processData = data.data.attributes;
 

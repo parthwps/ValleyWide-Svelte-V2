@@ -10,7 +10,7 @@
 	let emailSubject = '';
 	let emailResponse = '';
 	async function fetchContactDetails() {
-		const url = 'https://vwapi.netdevs.net/api/site-setting?populate=deep,3';
+		const url = 'https://valleywidebuilders.com/api/site-setting?populate=deep,3';
 		const headers = {
 			Authorization: 'Bearer ' + PUBLIC_STRAPI_API
 		};
@@ -32,7 +32,7 @@
 		message = '',
 		result = '';
 	async function doContact() {
-		const contactUrl = 'https://vwapi.netdevs.net/api/contact-forms';
+		const contactUrl = 'https://valleywidebuilders.com/api/contact-forms';
 		const res = await fetch(contactUrl, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json', Authorization: 'bearer ' + PUBLIC_STRAPI_API },
@@ -50,7 +50,7 @@
 			result = json.error.message;
 		} else {
 			result = 'Processing...';
-			const url2 = 'https://vwapi.netdevs.net/api/email/';
+			const url2 = 'https://valleywidebuilders.com/api/email/';
 			const res2 = await fetch(url2, {
 				method: 'POST',
 				headers: {
@@ -77,9 +77,9 @@
 	}
 
 	let promise = fetchContactSettings();
-	const domain = 'https://vwapi.netdevs.net/';
+	const domain = 'https://valleywidebuilders.com/';
 	async function fetchContactSettings() {
-		const url = 'https://vwapi.netdevs.net/api/contact-cta?populate=deep,3';
+		const url = 'https://valleywidebuilders.com/api/contact-cta?populate=deep,3';
 		const headers = {
 			Authorization: 'Bearer ' + PUBLIC_STRAPI_API
 		};

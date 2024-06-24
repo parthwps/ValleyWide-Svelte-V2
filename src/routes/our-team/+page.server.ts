@@ -6,6 +6,6 @@ export async function load() {
     const headers = {
         Authorization: 'Bearer ' + STRAPI_API 
     }
-    const response = await axios.get("https://vwapi.netdevs.net/api/our-team?populate=deep", { headers });
+    const response = await axios.get("https://valleywidebuilders.com/api/our-team?populate=deep", { headers });
     return response.data;
 }                                                                     

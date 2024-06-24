@@ -3,16 +3,16 @@ import { STRAPI_API } from '$env/static/private';
 
 
 export const load: PageLoad = async ({ params, fetch }) => {
-    const url = 'https://vwapi.netdevs.net/api/portfolios?filters[slug][$eq]='+params.slug+'&populate=deep,3';
+    const url = 'https://valleywidebuilders.com/api/portfolios?filters[slug][$eq]='+params.slug+'&populate=deep,3';
     const headers = {
         Authorization: 'Bearer ' + STRAPI_API 
     }    
     const response = await axios.get(url, { headers });
 
-    const urlporfolios = 'https://vwapi.netdevs.net/api/portfolios?fields[0]=title&fields[1]=slug&populate[2]=featuredImage';
+    const urlporfolios = 'https://valleywidebuilders.com/api/portfolios?fields[0]=title&fields[1]=slug&populate[2]=featuredImage';
     const portfolios = await axios.get(urlporfolios, {headers});
 
-    const urlSiteSettings = 'https://vwapi.netdevs.net/api/site-setting?populate=deep,3';
+    const urlSiteSettings = 'https://valleywidebuilders.com/api/site-setting?populate=deep,3';
     const siteSettings = await axios.get(urlSiteSettings, { headers }); 
 
     return {
@@ -25,7 +25,7 @@ export const load: PageLoad = async ({ params, fetch }) => {
 	// let randomCat = response.data.data[0].attributes.categories.data;
 	// randomCat = randomCat[Math.floor(Math.random() * randomCat.length ) ].id;
 
-    // const rpUrl = 'https://vwapi.netdevs.net/api/portfolios?filters[categories][id][$eq]='+randomCat+'&populate=deep,2';
+    // const rpUrl = 'https://valleywidebuilders.com/api/portfolios?filters[categories][id][$eq]='+randomCat+'&populate=deep,2';
     // const rData = await axios.get(rpUrl, { headers });
     // const rPortfolios = getRandomPortfolios(rData.data.data, 2);
     // const portfolio = response.data;

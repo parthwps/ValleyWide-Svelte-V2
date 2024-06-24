@@ -7,7 +7,7 @@
 	import { textAnimate, fly, fadeIn, slide, scaleUp } from '$lib/GsapAnimation.js';
 	export let data;
 	console.log(data.portfolio);
-	const domain = 'https://vwapi.netdevs.net';
+	const domain = 'https://valleywidebuilders.com';
 	let fallback = data.fallback.data.attributes.fallbackImage.data;
 
 	$: title = data.portfolio.data[0].attributes.title;

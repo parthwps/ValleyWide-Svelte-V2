@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Col, Container, Row } from "sveltestrap";
 	export let data;
-	let domain = "https://vwapi.netdevs.net";
+	let domain = "https://valleywidebuilders.com";
 	let member =  data.data[0].attributes;
 </script>
 <svelte:head>

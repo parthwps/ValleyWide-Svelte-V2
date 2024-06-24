@@ -14,7 +14,7 @@
 	import { textAnimate, fly, slide, fly2, slowDownSection } from '$lib/GsapAnimation.js';
   
 	let y = 0;
-	const domain = 'https://vwapi.netdevs.net';
+	const domain = 'https://valleywidebuilders.com';
 	const home = data.home.data.attributes;
 	let fallback = data.fallback.data.attributes.fallbackImage.data;
 	let propCount = 3;
