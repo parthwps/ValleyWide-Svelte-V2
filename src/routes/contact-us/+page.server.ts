@@ -2,14 +2,14 @@ import { STRAPI_API } from '$env/static/private';
 import axios from 'axios';
 
 export async function load() {
-    const url = 'https://valleywidebuilders.com/api/contact-page?populate=*';
+    const url = 'https://api.valleywidebuilders.com/api/contact-page?populate=*';
 
     const headers = {
         Authorization: 'Bearer ' + STRAPI_API 
     }  
     const response = await axios.get(url, { headers });
 
-    const contactDetailsURL = 'https://valleywidebuilders.com/api/site-setting?populate=deep,3';
+    const contactDetailsURL = 'https://api.valleywidebuilders.com/api/site-setting?populate=deep,3';
     const contactDetails = await axios.get(contactDetailsURL, { headers }); 
 
     // const response = await fetch(url, {

@@ -94,7 +94,7 @@ if(data.fallback.data.attributes.Google_Analytics_4){
 }
     </script>
     <svelte:head>
-        <link rel="preconnect" href="https://valleywidebuilders.com/">
+        <link rel="preconnect" href="https://api.valleywidebuilders.com/">
     </svelte:head>
     
     <div class="z10 {isPortfolio($page.route.id)} {isArticle($page.route.id)}">

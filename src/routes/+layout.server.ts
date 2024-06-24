@@ -22,7 +22,7 @@ export async function load() {
 }
 
 async function fetchMenu() {
-    const url = 'https://valleywidebuilders.com/api/menus/1?nested&populate=*';
+    const url = 'https://api.valleywidebuilders.com/api/menus/1?nested&populate=*';
     const headers = {
         Authorization: `Bearer ${STRAPI_API}`
     };
@@ -31,7 +31,7 @@ async function fetchMenu() {
 }
 
 async function fetchSiteSettings() {
-    const url = 'https://valleywidebuilders.com/api/site-setting?populate=deep,3';
+    const url = 'https://api.valleywidebuilders.com/api/site-setting?populate=deep,3';
     const headers = {
         Authorization: `Bearer ${STRAPI_API}`
     };

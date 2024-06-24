@@ -2,7 +2,7 @@ import axios from 'axios';
 import { STRAPI_API } from '$env/static/private';
 
 export async function load() {
-    const url = 'https://valleywidebuilders.com/api/our-process?populate=deep,2';
+    const url = 'https://api.valleywidebuilders.com/api/our-process?populate=deep,2';
     const headers = {
         Authorization: 'Bearer ' + STRAPI_API
     }    

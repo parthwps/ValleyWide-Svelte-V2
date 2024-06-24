@@ -3,7 +3,7 @@ import { STRAPI_API } from '$env/static/private';
 
 
 export async function load(params: { params: { slug: string; }; }) {
-    const url = 'https://valleywidebuilders.com/api/team-members?filters[slug][$eq]='+params.params.slug+'&populate=deep';
+    const url = 'https://api.valleywidebuilders.com/api/team-members?filters[slug][$eq]='+params.params.slug+'&populate=deep';
     const headers = {
         Authorization: 'Bearer ' + STRAPI_API
     }

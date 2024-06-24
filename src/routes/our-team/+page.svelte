@@ -9,7 +9,7 @@
 	import { textAnimate, fly, fadeIn, slide, slowDownSection } from '$lib/GsapAnimation.js';
 
 	export let data;
-	let domain = 'https://valleywidebuilders.com';
+	let domain = 'https://api.valleywidebuilders.com';
 	let ourTeam = data.data.attributes;
 	
 	let showModal = false;

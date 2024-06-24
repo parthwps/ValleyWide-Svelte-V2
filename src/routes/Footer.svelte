@@ -6,7 +6,7 @@
     // import Animate from "$lib/components/Animate.svelte"
     // import { fly } from "svelte/transition";
     import { fadeIn } from '$lib/GsapAnimation.js';
-    let domain = "https://valleywidebuilders.com/"
+    let domain = "https://api.valleywidebuilders.com/"
     import { PUBLIC_STRAPI_API } from '$env/static/public';
         // import { fadeIn } from '$lib/GsapAnimation';
     

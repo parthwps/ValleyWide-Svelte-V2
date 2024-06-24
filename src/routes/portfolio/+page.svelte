@@ -10,7 +10,7 @@
     import { paginate, LightPaginationNav } from 'svelte-paginate';
     import { textAnimate, fly, slide } from '$lib/GsapAnimation.js';
 
-	let domain = "https://valleywidebuilders.com";
+	let domain = "https://api.valleywidebuilders.com";
 	let portfolio =  data.portfolio.data.attributes; 
     let fallback = data.fallback.data.attributes.fallbackImage.data;
     let portfolioList = [];
@@ -50,7 +50,7 @@
     $: if (activeTab) { // Check if has new variable data
         loading = true;
         (async () => {
-            const url = "https://valleywidebuilders.com/api/portfolios?filters[categories][id][$eq]="+activeTab+"&populate=deep,2";
+            const url = "https://api.valleywidebuilders.com/api/portfolios?filters[categories][id][$eq]="+activeTab+"&populate=deep,2";
             const headers = {
                 Authorization: 'Bearer ' + PUBLIC_STRAPI_API
             }  

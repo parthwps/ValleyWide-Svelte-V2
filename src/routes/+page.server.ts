@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { STRAPI_API } from '$env/static/private';
 
-const baseUrl = 'https://valleywidebuilders.com/api/';
+const baseUrl = 'https://api.valleywidebuilders.com/api/';
 
 export async function load() {
     try {
@@ -44,7 +44,7 @@ function logResponseFromCache(response) {
 // import { STRAPI_API } from '$env/static/private';
 
 // export async function load() {
-//     const url = 'https://valleywidebuilders.com/api/home-page?populate=deep,3';
+//     const url = 'https://api.valleywidebuilders.com/api/home-page?populate=deep,3';
     
 //     const headers = {
 //         rel: 'preconnect',
@@ -52,7 +52,7 @@ function logResponseFromCache(response) {
 //     }    
 //     const response = await axios.get(url, { headers });
 
-//     const urlSiteSettings = 'https://valleywidebuilders.com/api/site-setting?populate=deep,3';
+//     const urlSiteSettings = 'https://api.valleywidebuilders.com/api/site-setting?populate=deep,3';
 //     const siteSettings = await axios.get(urlSiteSettings, { headers }); 
 
 //     if (response.fromCache) {

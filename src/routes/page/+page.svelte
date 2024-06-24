@@ -1,6 +1,6 @@
 <!-- YourComponent.svelte -->
 <script>
-    let imageSrc = 'https://valleywidebuilders.com/uploads/small_Heritage_Park_aerials_67421907fe.webp';
+    let imageSrc = 'https://api.valleywidebuilders.com/uploads/small_Heritage_Park_aerials_67421907fe.webp';
     let imageSize = 'small';
     let imageLoaded = false;
   
@@ -10,11 +10,11 @@
       switch (imageSize) {
         case 'small':
           imageSize = 'medium';
-          imageSrc = 'https://valleywidebuilders.com/uploads/medium_Heritage_Park_aerials_67421907fe.webp';
+          imageSrc = 'https://api.valleywidebuilders.com/uploads/medium_Heritage_Park_aerials_67421907fe.webp';
           break;
         case 'medium':
           imageSize = 'large';
-          imageSrc = 'https://valleywidebuilders.com/uploads/large_x2_Heritage_Park_aerials_67421907fe.webp';
+          imageSrc = 'https://api.valleywidebuilders.com/uploads/large_x2_Heritage_Park_aerials_67421907fe.webp';
           break;
       }
     }

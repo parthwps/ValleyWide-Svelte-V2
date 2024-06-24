@@ -3,7 +3,7 @@
   import leftar from '$lib/img/left-ar.svg';
   import rightar from '$lib/img/right-ar.svg';
   import {Row,Col} from 'sveltestrap';
-  const domain = "https://valleywidebuilders.com";
+  const domain = "https://api.valleywidebuilders.com";
   export let preHeading; 
   export let heading; 
   export let btnTitle;

@@ -5,10 +5,10 @@
 	import { PUBLIC_STRAPI_API } from '$env/static/public';
 	import { textAnimate, fly, fadeIn, slide, bgZoom } from '$lib/GsapAnimation.js';
 
-	const domain = "https://valleywidebuilders.com"
+	const domain = "https://api.valleywidebuilders.com"
 	let promise = fetchCta();
 	async function fetchCta(){
-		const url = 'https://valleywidebuilders.com/api/global-cta?populate=deep,2';
+		const url = 'https://api.valleywidebuilders.com/api/global-cta?populate=deep,2';
 		const headers = {
 			Authorization: 'Bearer ' + PUBLIC_STRAPI_API
 		};

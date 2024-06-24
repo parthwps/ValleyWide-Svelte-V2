@@ -10,7 +10,7 @@
     import { PUBLIC_STRAPI_API } from '$env/static/public';
     import axios from 'axios';
     import { textAnimate, fly, fadeIn, slide } from '$lib/GsapAnimation.js';
-    let url = "https://valleywidebuilders.com";
+    let url = "https://api.valleywidebuilders.com";
     let fallback = data.fallback.data.attributes.fallbackImage.data;
   let currentPage = 1;
   let pageSize = 5;
@@ -37,9 +37,9 @@
         (async () => {
             let apiUrl;
             if(activeCategoryTab || activeCategoryTab != '') { // if has activeCategoryTab, add it on the fetch url
-                apiUrl = "https://valleywidebuilders.com/api/blogs?sort[0]=createdAt:"+activeDate+"&filters[blog_category][id][$eq]="+activeCategoryTab+"&populate=deep";
+                apiUrl = "https://api.valleywidebuilders.com/api/blogs?sort[0]=createdAt:"+activeDate+"&filters[blog_category][id][$eq]="+activeCategoryTab+"&populate=deep";
             } else {
-                apiUrl = "https://valleywidebuilders.com/api/blogs?sort[0]=createdAt:"+activeDate+"&populate=deep";
+                apiUrl = "https://api.valleywidebuilders.com/api/blogs?sort[0]=createdAt:"+activeDate+"&populate=deep";
             }
             const headers = {
                 Authorization: 'Bearer ' + PUBLIC_STRAPI_API

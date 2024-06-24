@@ -26,9 +26,9 @@
 	import { fly, slide } from 'svelte/transition';
 
 	let promise = fetchSiteSettings();
-	const domain = "https://valleywidebuilders.com/";
+	const domain = "https://api.valleywidebuilders.com/";
 	async function fetchSiteSettings(){
-		const url = 'https://valleywidebuilders.com/api/site-setting?populate=deep,3';
+		const url = 'https://api.valleywidebuilders.com/api/site-setting?populate=deep,3';
 		const headers = {
 			Authorization: 'Bearer ' + PUBLIC_STRAPI_API
 		};
